@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B2A6DF7F21A6083C0033BB21 /* PasswordListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */; };
 		B2BA67032199EC6A00ABC44A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA67022199EC6A00ABC44A /* AppDelegate.swift */; };
-		B2BA67052199EC6A00ABC44A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA67042199EC6A00ABC44A /* ViewController.swift */; };
 		B2BA67072199EC6B00ABC44A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BA67062199EC6B00ABC44A /* Assets.xcassets */; };
 		B2BA670A2199EC6C00ABC44A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BA67082199EC6C00ABC44A /* Main.storyboard */; };
 		B2BA67162199EC6C00ABC44A /* SudoLikeAnOPTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA67152199EC6C00ABC44A /* SudoLikeAnOPTests.swift */; };
@@ -33,9 +33,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListController.swift; sourceTree = "<group>"; };
 		B2BA66FF2199EC6A00ABC44A /* SudoLikeAnOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudoLikeAnOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BA67022199EC6A00ABC44A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2BA67042199EC6A00ABC44A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B2BA67062199EC6B00ABC44A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2BA67092199EC6C00ABC44A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2BA670B2199EC6C00ABC44A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -97,11 +97,11 @@
 			isa = PBXGroup;
 			children = (
 				B2BA67022199EC6A00ABC44A /* AppDelegate.swift */,
-				B2BA67042199EC6A00ABC44A /* ViewController.swift */,
 				B2BA67062199EC6B00ABC44A /* Assets.xcassets */,
-				B2BA67082199EC6C00ABC44A /* Main.storyboard */,
 				B2BA670B2199EC6C00ABC44A /* Info.plist */,
 				B2BA670C2199EC6C00ABC44A /* SudoLikeAnOP.entitlements */,
+				B2BA67082199EC6C00ABC44A /* Main.storyboard */,
+				B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */,
 			);
 			path = SudoLikeAnOP;
 			sourceTree = "<group>";
@@ -254,7 +254,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2BA67052199EC6A00ABC44A /* ViewController.swift in Sources */,
+				B2A6DF7F21A6083C0033BB21 /* PasswordListController.swift in Sources */,
 				B2BA67032199EC6A00ABC44A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
