@@ -1,19 +1,14 @@
-//
-//  AppDelegate.swift
-//  SudoLikeAnOP
-//
-//  Created by Russell Teabeault on 11/12/18.
-//  Copyright © 2018 Russell Teabeault. All rights reserved.
-//
-
 import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        NSApp.activate(ignoringOtherApps: true)
         // Insert code here to initialize your application
     }
 

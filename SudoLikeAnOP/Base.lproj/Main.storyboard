@@ -683,7 +683,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="MainWindowController" customModule="SudoLikeAnOP" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Password" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -694,7 +694,7 @@
                         </connections>
                     </window>
                     <connections>
-                        <segue destination="YPb-Ss-NeC" kind="relationship" relationship="window.shadowedContentViewController" id="C8L-1i-6Xt"/>
+                        <segue destination="6Fu-n3-ZzI" kind="relationship" relationship="window.shadowedContentViewController" id="4fv-1S-Wlk"/>
                     </connections>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -704,7 +704,7 @@
         <!--Password List Controller-->
         <scene sceneID="tyt-mU-o5H">
             <objects>
-                <viewController id="YPb-Ss-NeC" customClass="PasswordListController" customModule="SudoLikeAnOP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="passwordList" id="YPb-Ss-NeC" customClass="PasswordListController" customModule="SudoLikeAnOP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="LIS-QN-E0g">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -782,7 +782,51 @@
                 </viewController>
                 <customObject id="eFa-16-gpL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="638" y="233"/>
+            <point key="canvasLocation" x="546" y="643"/>
+        </scene>
+        <!--Password Prompt Controller-->
+        <scene sceneID="dFR-2Q-93a">
+            <objects>
+                <viewController title="Password Prompt Controller" id="6Fu-n3-ZzI" customClass="PasswordPromptController" customModule="SudoLikeAnOP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="rlW-8v-Hyn">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adT-Pd-Ibd">
+                                <rect key="frame" x="111" y="150" width="180" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesSingleLineMode="YES" id="dgM-Iz-7wb">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                    <allowedInputSourceLocales>
+                                        <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                    </allowedInputSourceLocales>
+                                </secureTextFieldCell>
+                            </secureTextField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mm1-ZU-Fmf">
+                                <rect key="frame" x="307" y="144" width="32" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ITw-Og-PzW">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="pushUnlockBtn:" target="6Fu-n3-ZzI" id="TXL-Y0-8TQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="passwordTextField" destination="adT-Pd-Ibd" id="3rs-c5-o5E"/>
+                    </connections>
+                </viewController>
+                <customObject id="4CZ-Tp-Glc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="643"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NSAddTemplate" width="11" height="11"/>
+    </resources>
 </document>

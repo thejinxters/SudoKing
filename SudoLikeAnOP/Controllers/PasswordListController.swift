@@ -1,11 +1,3 @@
-//
-//  PasswordListController.swift
-//  SudoLikeAnOP
-//
-//  Created by Russell Teabeault on 11/21/18.
-//  Copyright © 2018 Russell Teabeault. All rights reserved.
-//
-
 import Cocoa
 
 class PasswordListController: NSViewController {
@@ -16,7 +8,7 @@ class PasswordListController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ViewDidLoad")
+        debugPrint("ViewDidLoad")
         tableView.delegate = self
         tableView.dataSource = self
         // Do view setup here.
@@ -28,7 +20,6 @@ class PasswordListController: NSViewController {
 extension PasswordListController: NSTableViewDataSource {
     
     func numberOfRows(in tableView: NSTableView) -> Int {
-        print("Getting number of rows")
         return passwords.count
     }
 }
