@@ -740,9 +740,8 @@
                                                             <rect key="frame" x="1" y="1" width="445" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
-                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aBc-pU-sps">
+                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="aBc-pU-sps">
                                                                     <rect key="frame" x="0.0" y="0.0" width="445" height="17"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="cn9-7z-TOz">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -750,6 +749,12 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                             </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="aBc-pU-sps" firstAttribute="leading" secondItem="qBJ-3q-PWQ" secondAttribute="leading" constant="2" id="GRR-ZN-51o"/>
+                                                                <constraint firstAttribute="trailing" secondItem="aBc-pU-sps" secondAttribute="trailing" constant="2" id="HRL-Ox-ldq"/>
+                                                                <constraint firstAttribute="bottom" secondItem="aBc-pU-sps" secondAttribute="bottom" id="m7K-1B-N4Z"/>
+                                                                <constraint firstItem="aBc-pU-sps" firstAttribute="top" secondItem="qBJ-3q-PWQ" secondAttribute="top" id="plx-e5-Bel"/>
+                                                            </constraints>
                                                             <connections>
                                                                 <outlet property="textField" destination="aBc-pU-sps" id="0UE-vN-TIr"/>
                                                             </connections>
@@ -777,7 +782,7 @@
                 </viewController>
                 <customObject id="eFa-16-gpL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="606" y="243"/>
+            <point key="canvasLocation" x="638" y="233"/>
         </scene>
     </scenes>
 </document>
