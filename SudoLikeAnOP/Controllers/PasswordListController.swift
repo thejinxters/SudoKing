@@ -8,12 +8,26 @@ class PasswordListController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        debugPrint("ViewDidLoad")
         tableView.delegate = self
         tableView.dataSource = self
         // Do view setup here.
         tableView.reloadData()
-
+        
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
+            self.keyDown(with: $0)
+            return $0
+        }
+    }
+    
+    override func keyDown(with event: NSEvent){
+        switch event.keyCode {
+        case 36: // Return
+            print(passwords[tableView.selectedRow])
+            self.view.window?.close()
+            break
+        default:
+            break
+        }
     }
 }
 
