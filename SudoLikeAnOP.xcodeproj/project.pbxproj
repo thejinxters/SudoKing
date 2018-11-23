@@ -73,6 +73,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70969B7F21A8415300E7D011 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		B2BA66F62199EC6A00ABC44A = {
 			isa = PBXGroup;
 			children = (
@@ -96,12 +104,12 @@
 		B2BA67012199EC6A00ABC44A /* SudoLikeAnOP */ = {
 			isa = PBXGroup;
 			children = (
+				70969B7F21A8415300E7D011 /* Controllers */,
 				B2BA67022199EC6A00ABC44A /* AppDelegate.swift */,
 				B2BA67062199EC6B00ABC44A /* Assets.xcassets */,
 				B2BA670B2199EC6C00ABC44A /* Info.plist */,
 				B2BA670C2199EC6C00ABC44A /* SudoLikeAnOP.entitlements */,
 				B2BA67082199EC6C00ABC44A /* Main.storyboard */,
-				B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */,
 			);
 			path = SudoLikeAnOP;
 			sourceTree = "<group>";
