@@ -3,16 +3,17 @@ import Cocoa
 class PasswordListController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     
-    let passwords = ["Gnip Sudo", "Synology Sudo", "Your mother"]
+    let passwords: [PasswordListItem] = OnePasswordLibrary.retrievePasswordList()
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        // Do view setup here.
         tableView.reloadData()
+        selectFirstRow()
         
+        // Registers keyDown listener within view
         NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
             self.keyDown(with: $0)
             return $0
@@ -22,11 +23,20 @@ class PasswordListController: NSViewController {
     override func keyDown(with event: NSEvent){
         switch event.keyCode {
         case 36: // Return
-            print(passwords[tableView.selectedRow])
-            self.view.window?.close()
+            if (tableView.numberOfRows > 0){
+                let uuid = passwords[tableView.selectedRow].uuid
+                print(OnePasswordLibrary.retrievePassword(uuid: uuid) ?? "")
+                self.view.window?.close()
+            }
             break
         default:
             break
+        }
+    }
+    
+    func selectFirstRow() {
+        if (tableView.numberOfRows > 0){
+            tableView.selectRowIndexes(.init(integer: 0), byExtendingSelection: false)
         }
     }
 }
@@ -54,7 +64,7 @@ extension PasswordListController: NSTableViewDelegate {
         dateFormatter.dateStyle = .long
         dateFormatter.timeStyle = .long
         
-        let item = passwords[row]
+        let item = passwords[row].name
         
         if tableColumn == tableView.tableColumns[0] {
             text = item

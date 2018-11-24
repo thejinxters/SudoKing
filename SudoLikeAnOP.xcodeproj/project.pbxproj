@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7090347421A86914002C3FF1 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7090347321A86914002C3FF1 /* Log.swift */; };
+		7090347721A8A4AC002C3FF1 /* OnePasswordLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7090347621A8A4AC002C3FF1 /* OnePasswordLibrary.swift */; };
 		70969B8121A842E200E7D011 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70969B8021A842E200E7D011 /* MainWindowController.swift */; };
 		70969B8521A8473100E7D011 /* PasswordPromptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70969B8421A8473100E7D011 /* PasswordPromptController.swift */; };
 		B2A6DF7F21A6083C0033BB21 /* PasswordListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		7090347321A86914002C3FF1 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		7090347621A8A4AC002C3FF1 /* OnePasswordLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordLibrary.swift; sourceTree = "<group>"; };
 		70969B8021A842E200E7D011 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		70969B8421A8473100E7D011 /* PasswordPromptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordPromptController.swift; sourceTree = "<group>"; };
 		B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListController.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				7090347321A86914002C3FF1 /* Log.swift */,
+				7090347621A8A4AC002C3FF1 /* OnePasswordLibrary.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7090347421A86914002C3FF1 /* Log.swift in Sources */,
+				7090347721A8A4AC002C3FF1 /* OnePasswordLibrary.swift in Sources */,
 				B2A6DF7F21A6083C0033BB21 /* PasswordListController.swift in Sources */,
 				B2BA67032199EC6A00ABC44A /* AppDelegate.swift in Sources */,
 				70969B8521A8473100E7D011 /* PasswordPromptController.swift in Sources */,

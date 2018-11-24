@@ -7,15 +7,15 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
 
-    func applicationDidFinishLaunching(_ aNotification: Notification) {
+    func applicationWillFinishLaunching(_ notification: Notification) {
         NSApp.activate(ignoringOtherApps: true)
+    }
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
-
-
 }
 

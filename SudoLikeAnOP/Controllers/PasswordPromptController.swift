@@ -14,8 +14,8 @@ class PasswordPromptController: NSViewController {
     
     func passwordValidation(password: String) {
         // TODO: Validate not an empty string
-        // TODO: Validate password against OP
-        self.viewHasPassword(validPassword: true)
+        let isValidPassword = OnePasswordLibrary.validatePassword(password: password)
+        self.viewHasPassword(validPassword: isValidPassword)
     }
     
     override func viewWillAppear() {
