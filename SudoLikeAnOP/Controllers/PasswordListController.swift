@@ -1,13 +1,29 @@
 import Cocoa
 
 class PasswordListController: NSViewController {
+    @IBOutlet weak var searchField: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
     
-    let passwords: [PasswordListItem] = OnePasswordLibrary.retrievePasswordList()
-
+    let fetchedPasswords: [PasswordListItem] = OnePasswordLibrary.retrievePasswordList()
+    var passwords: [PasswordListItem] = []
+    
+    func filterPasswords() {
+        let searchString = searchField.stringValue.lowercased()
+        if (searchString.count > 0){
+            passwords = fetchedPasswords.filter { (passwordItem) -> Bool in
+                passwordItem.name.lowercased().contains(searchString)
+            }
+        } else {
+            passwords = fetchedPasswords
+        }
+        tableView.reloadData()
+        selectFirstRow()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        passwords = fetchedPasswords
+        searchField.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
         tableView.reloadData()
@@ -79,4 +95,10 @@ extension PasswordListController: NSTableViewDelegate {
         return nil
     }
     
+}
+
+extension PasswordListController: NSTextFieldDelegate {
+    func controlTextDidChange(_ obj: Notification) {
+        self.filterPasswords()
+    }
 }
