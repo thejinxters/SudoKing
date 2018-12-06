@@ -17,5 +17,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
+    
+    func applicationDidResignActive(_ notification: Notification) {
+        Log.info("applicaiton lost focus")
+        NSApp.windows.forEach { (window) in
+            window.close()
+        }
+    }
 }
 

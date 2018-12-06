@@ -4,7 +4,7 @@ class PasswordListController: NSViewController {
     @IBOutlet weak var searchField: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
     
-    let fetchedPasswords: [PasswordListItem] = OnePasswordLibrary.retrievePasswordList()
+    let fetchedPasswords: [PasswordListItem] = PasswordLibraryFactory.shared.retrievePasswordList()
     var passwords: [PasswordListItem] = []
     
     func filterPasswords() {
@@ -41,7 +41,7 @@ class PasswordListController: NSViewController {
         case 36: // Return
             if (tableView.numberOfRows > 0){
                 let uuid = passwords[tableView.selectedRow].uuid
-                print(OnePasswordLibrary.retrievePassword(uuid: uuid) ?? "")
+                print(PasswordLibraryFactory.shared.retrievePassword(uuid: uuid) ?? "")
                 self.view.window?.close()
             }
             break

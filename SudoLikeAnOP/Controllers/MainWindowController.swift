@@ -3,7 +3,6 @@ import Cocoa
 class MainWindowController: NSWindowController {
     
     override func windowDidLoad() {
-        Log.info("Main Window Loaded")
         NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
             self.keyDown(with: $0)
             return $0

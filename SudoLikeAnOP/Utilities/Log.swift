@@ -7,11 +7,11 @@ class Log {
         log(message: message, logType: OSLogType.info)
     }
     
-    class func debug(message: String) {
+    class func debug(_ message: String) {
         log(message: message, logType: OSLogType.debug)
     }
     
-    class func error(message: String) {
+    class func error(_ message: String) {
         log(message: message, logType: OSLogType.error)
     }
     
