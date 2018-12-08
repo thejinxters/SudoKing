@@ -3,6 +3,7 @@ import Cocoa
 class MainWindowController: NSWindowController {
     
     override func windowDidLoad() {
+        Log.info("Sudo Like an OP loaded")
         NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
             self.keyDown(with: $0)
             return $0

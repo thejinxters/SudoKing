@@ -16,7 +16,8 @@ class Log {
     }
     
     private class func log(message: String, logType: OSLogType) {
-        os_log("%@", type: logType, message)
+        let customLog = OSLog(subsystem: "com.sudolikeanop.cli", category: "sudolikeanop")
+        os_log("%{public}@", log: customLog, type: logType, message)
     }
     
 }

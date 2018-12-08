@@ -72,13 +72,8 @@ extension PasswordListController: NSTableViewDelegate {
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         
-//        var image: NSImage?
         var text: String = ""
         var cellIdentifier: String = ""
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .long
-        dateFormatter.timeStyle = .long
         
         let item = passwords[row].name
         
@@ -89,7 +84,6 @@ extension PasswordListController: NSTableViewDelegate {
         
         if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(cellIdentifier), owner: nil) as? NSTableCellView {
             cell.textField?.stringValue = text
-//            cell.imageView?.image = image ?? nil
             return cell
         }
         return nil

@@ -14,14 +14,15 @@ class PasswordPromptController: NSViewController {
     
     func passwordValidation(password: String) {
         // TODO: Validate not an empty string
+        Log.debug("Valdiating Password")
         let isValidPassword = PasswordLibraryFactory.shared.validateMasterPassword(password: password)
         self.viewHasPassword(validPassword: isValidPassword)
     }
     
     override func viewWillAppear() {
         // called immediately before view appears
-        // TODO: Check for valid session to OP
-        self.viewHasPassword(validPassword: false)
+        let sessionActive = PasswordLibraryFactory.shared.validSessionActive()
+        self.viewHasPassword(validPassword: sessionActive)
     }
     
     func viewHasPassword(validPassword: Bool){

@@ -7,72 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7038FD8A21B8596200AE26BA /* SwiftShell.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7038FD8921B8595C00AE26BA /* SwiftShell.framework */; };
-		7038FD8B21B8596200AE26BA /* SwiftShell.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7038FD8921B8595C00AE26BA /* SwiftShell.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7038FD9221B85C9100AE26BA /* PasswordListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7038FD9121B85C9100AE26BA /* PasswordListItem.swift */; };
 		7038FD9421B8657300AE26BA /* PasswordLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7038FD9321B8657300AE26BA /* PasswordLibrary.swift */; };
 		7038FD9621B8734500AE26BA /* PasswordLibraryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7038FD9521B8734500AE26BA /* PasswordLibraryFactory.swift */; };
 		7038FD9821B89B7B00AE26BA /* OPListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7038FD9721B89B7B00AE26BA /* OPListItem.swift */; };
 		7038FD9A21B89EA200AE26BA /* OPPasswordItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7038FD9921B89EA200AE26BA /* OPPasswordItem.swift */; };
+		7038FD9E21B9A43400AE26BA /* OnePasswordConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7038FD9D21B9A43400AE26BA /* OnePasswordConfig.swift */; };
+		7038FDA321B9A4C600AE26BA /* OnePasswordSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7038FDA221B9A4C600AE26BA /* OnePasswordSessionManager.swift */; };
+		7038FDA521BAD63400AE26BA /* BashUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7038FDA421BAD63400AE26BA /* BashUtility.swift */; };
 		7090347421A86914002C3FF1 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7090347321A86914002C3FF1 /* Log.swift */; };
 		7090347721A8A4AC002C3FF1 /* OnePasswordLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7090347621A8A4AC002C3FF1 /* OnePasswordLibrary.swift */; };
 		70969B8121A842E200E7D011 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70969B8021A842E200E7D011 /* MainWindowController.swift */; };
 		70969B8521A8473100E7D011 /* PasswordPromptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70969B8421A8473100E7D011 /* PasswordPromptController.swift */; };
+		7096F33421BB37140048585D /* OnePasswordConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096F33321BB37140048585D /* OnePasswordConfigManager.swift */; };
+		70AE4EA921BC1C0F009BE836 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 70AE4EA821BC1C0F009BE836 /* README.md */; };
 		B2A6DF7F21A6083C0033BB21 /* PasswordListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */; };
 		B2BA67032199EC6A00ABC44A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA67022199EC6A00ABC44A /* AppDelegate.swift */; };
 		B2BA67072199EC6B00ABC44A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BA67062199EC6B00ABC44A /* Assets.xcassets */; };
 		B2BA670A2199EC6C00ABC44A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BA67082199EC6C00ABC44A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		7038FD8621B8595C00AE26BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7038FD7E21B8595C00AE26BA /* Dependencies.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "Dependencies::Dependencies::Product";
-			remoteInfo = Dependencies;
-		};
-		7038FD8821B8595C00AE26BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7038FD7E21B8595C00AE26BA /* Dependencies.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = "SwiftShell::SwiftShell::Product";
-			remoteInfo = SwiftShell;
-		};
-		7038FD8C21B8596200AE26BA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 7038FD7E21B8595C00AE26BA /* Dependencies.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = "SwiftShell::SwiftShell";
-			remoteInfo = SwiftShell;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		7038FD8E21B8596200AE26BA /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				7038FD8B21B8596200AE26BA /* SwiftShell.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		7038FD7E21B8595C00AE26BA /* Dependencies.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = Dependencies.xcodeproj; sourceTree = "<group>"; };
 		7038FD9121B85C9100AE26BA /* PasswordListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListItem.swift; sourceTree = "<group>"; };
 		7038FD9321B8657300AE26BA /* PasswordLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLibrary.swift; sourceTree = "<group>"; };
 		7038FD9521B8734500AE26BA /* PasswordLibraryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordLibraryFactory.swift; sourceTree = "<group>"; };
 		7038FD9721B89B7B00AE26BA /* OPListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPListItem.swift; sourceTree = "<group>"; };
 		7038FD9921B89EA200AE26BA /* OPPasswordItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OPPasswordItem.swift; sourceTree = "<group>"; };
+		7038FD9D21B9A43400AE26BA /* OnePasswordConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordConfig.swift; sourceTree = "<group>"; };
+		7038FDA221B9A4C600AE26BA /* OnePasswordSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordSessionManager.swift; sourceTree = "<group>"; };
+		7038FDA421BAD63400AE26BA /* BashUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BashUtility.swift; sourceTree = "<group>"; };
 		7090347321A86914002C3FF1 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		7090347621A8A4AC002C3FF1 /* OnePasswordLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordLibrary.swift; sourceTree = "<group>"; };
 		70969B8021A842E200E7D011 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		70969B8421A8473100E7D011 /* PasswordPromptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordPromptController.swift; sourceTree = "<group>"; };
+		7096F33321BB37140048585D /* OnePasswordConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordConfigManager.swift; sourceTree = "<group>"; };
+		70AE4EA821BC1C0F009BE836 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListController.swift; sourceTree = "<group>"; };
 		B2BA66FF2199EC6A00ABC44A /* SudoLikeAnOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudoLikeAnOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BA67022199EC6A00ABC44A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -87,22 +56,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7038FD8A21B8596200AE26BA /* SwiftShell.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		7038FD7F21B8595C00AE26BA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				7038FD8721B8595C00AE26BA /* Dependencies.framework */,
-				7038FD8921B8595C00AE26BA /* SwiftShell.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		7038FD8F21B85C6700AE26BA /* PasswordLibrary */ = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +79,9 @@
 				7090347621A8A4AC002C3FF1 /* OnePasswordLibrary.swift */,
 				7038FD9721B89B7B00AE26BA /* OPListItem.swift */,
 				7038FD9921B89EA200AE26BA /* OPPasswordItem.swift */,
+				7038FD9D21B9A43400AE26BA /* OnePasswordConfig.swift */,
+				7038FDA221B9A4C600AE26BA /* OnePasswordSessionManager.swift */,
+				7096F33321BB37140048585D /* OnePasswordConfigManager.swift */,
 			);
 			path = OnePassword;
 			sourceTree = "<group>";
@@ -129,6 +91,7 @@
 			children = (
 				7038FD8F21B85C6700AE26BA /* PasswordLibrary */,
 				7090347321A86914002C3FF1 /* Log.swift */,
+				7038FDA421BAD63400AE26BA /* BashUtility.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -148,7 +111,7 @@
 			children = (
 				B2BA67012199EC6A00ABC44A /* SudoLikeAnOP */,
 				B2BA67002199EC6A00ABC44A /* Products */,
-				7038FD7E21B8595C00AE26BA /* Dependencies.xcodeproj */,
+				70AE4EA821BC1C0F009BE836 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,12 +147,10 @@
 				B2BA66FB2199EC6A00ABC44A /* Sources */,
 				B2BA66FC2199EC6A00ABC44A /* Frameworks */,
 				B2BA66FD2199EC6A00ABC44A /* Resources */,
-				7038FD8E21B8596200AE26BA /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				7038FD8D21B8596200AE26BA /* PBXTargetDependency */,
 			);
 			name = SudoLikeAnOP;
 			productName = SudoLikeAnOP;
@@ -227,12 +188,6 @@
 			mainGroup = B2BA66F62199EC6A00ABC44A;
 			productRefGroup = B2BA67002199EC6A00ABC44A /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 7038FD7F21B8595C00AE26BA /* Products */;
-					ProjectRef = 7038FD7E21B8595C00AE26BA /* Dependencies.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				B2BA66FE2199EC6A00ABC44A /* SudoLikeAnOP */,
@@ -240,28 +195,12 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXReferenceProxy section */
-		7038FD8721B8595C00AE26BA /* Dependencies.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Dependencies.framework;
-			remoteRef = 7038FD8621B8595C00AE26BA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		7038FD8921B8595C00AE26BA /* SwiftShell.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = SwiftShell.framework;
-			remoteRef = 7038FD8821B8595C00AE26BA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
-
 /* Begin PBXResourcesBuildPhase section */
 		B2BA66FD2199EC6A00ABC44A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70AE4EA921BC1C0F009BE836 /* README.md in Resources */,
 				B2BA67072199EC6B00ABC44A /* Assets.xcassets in Resources */,
 				B2BA670A2199EC6C00ABC44A /* Main.storyboard in Resources */,
 			);
@@ -276,27 +215,23 @@
 			files = (
 				7038FD9421B8657300AE26BA /* PasswordLibrary.swift in Sources */,
 				7038FD9A21B89EA200AE26BA /* OPPasswordItem.swift in Sources */,
+				7038FDA521BAD63400AE26BA /* BashUtility.swift in Sources */,
+				7038FDA321B9A4C600AE26BA /* OnePasswordSessionManager.swift in Sources */,
 				7038FD9621B8734500AE26BA /* PasswordLibraryFactory.swift in Sources */,
 				7090347421A86914002C3FF1 /* Log.swift in Sources */,
+				7096F33421BB37140048585D /* OnePasswordConfigManager.swift in Sources */,
 				7090347721A8A4AC002C3FF1 /* OnePasswordLibrary.swift in Sources */,
 				7038FD9221B85C9100AE26BA /* PasswordListItem.swift in Sources */,
 				7038FD9821B89B7B00AE26BA /* OPListItem.swift in Sources */,
 				B2A6DF7F21A6083C0033BB21 /* PasswordListController.swift in Sources */,
 				B2BA67032199EC6A00ABC44A /* AppDelegate.swift in Sources */,
+				7038FD9E21B9A43400AE26BA /* OnePasswordConfig.swift in Sources */,
 				70969B8521A8473100E7D011 /* PasswordPromptController.swift in Sources */,
 				70969B8121A842E200E7D011 /* MainWindowController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		7038FD8D21B8596200AE26BA /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftShell;
-			targetProxy = 7038FD8C21B8596200AE26BA /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B2BA67082199EC6C00ABC44A /* Main.storyboard */ = {
@@ -428,7 +363,6 @@
 		B2BA67262199EC6C00ABC44A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -446,7 +380,6 @@
 		B2BA67272199EC6C00ABC44A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;

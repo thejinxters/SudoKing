@@ -1,20 +1,53 @@
 import Foundation
-import SwiftShell
 
 class OnePasswordLibrary {
     let opExecutable:String = "op"
+    let config = OnePasswordConfigManager.shared
+    
+    private func signIn(password: String) -> Bool {
+        Log.debug("Retrieving an new session")
+        if (OnePasswordSessionManager.getStoredSession() == nil) {
+            do {
+                let session = try bash("echo \(password) | \(config.pathToOPBinary) signin my \(config.email) \(config.secretKey) --output=raw")
+                if session.exitCode == 0 {
+                    return OnePasswordSessionManager.createSession(session: session.stdout)
+                } else {
+                    Log.error("Error Sigining in: \(session.stderr)")
+                    return false
+                }
+            } catch let error as NSError {
+                Log.error("Error Signing in: \(error.description)")
+                return false
+            }
+        } else {
+            return true
+        }
+    }
     
     private func listPasswords() -> String {
-        return run("cat", "/Users/bmikulka/Downloads/talia.json").stdout
+        let session = OnePasswordSessionManager.getStoredSession()!
+        Log.debug("Retrieving list of OP Items")
+        do {
+            let listResponse = try bash("\(config.pathToOPBinary) list items --session=\(session)")
+            return listResponse.stdout
+        } catch let error as NSError {
+            Log.error("Error Signing in: \(error.description)")
+            return "[]" // Empty Array
+        }
     }
     
     private func getPassword(_ uuid: String) -> String {
-        return run("cat", "/Users/bmikulka/Downloads/talia-p.json").stdout
+        let session = OnePasswordSessionManager.getStoredSession()!
+        do {
+            return try bash("\(config.pathToOPBinary) get item \(uuid) --session=\(session)").stdout
+        } catch let error as NSError {
+            Log.error("Error getting Password: \(error.description)")
+            return ""
+        }
     }
     
     private func convertJsonToPasswordListItem(_ passwordListString: String) -> [OPListItem] {
         var list: [OPListItem]?
-        
         do {
             let decoder = JSONDecoder()
             let data = passwordListString.data(using: .utf8)!
@@ -43,7 +76,7 @@ class OnePasswordLibrary {
 
 extension OnePasswordLibrary: PasswordLibrary {
     func validateMasterPassword(password: String) -> Bool {
-        return password == "mypass"
+        return signIn(password: password)
     }
     
     func retrievePasswordList() -> [PasswordListItem] {
@@ -71,5 +104,9 @@ extension OnePasswordLibrary: PasswordLibrary {
         }
         
         return password?.value
+    }
+    
+    func validSessionActive() -> Bool {
+        return OnePasswordSessionManager.getStoredSession() != nil
     }
 }
