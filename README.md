@@ -10,7 +10,7 @@ op command line tool: `brew install op`
 ### Required config file:
 
 create a file with the following contents at `~/.sudolikeanop/config`
-```json
+```javascript
 {
     "subdomain": "my", //subdomain, this is an example for my.1password.com
     "email": "email@example.com",
