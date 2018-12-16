@@ -20,8 +20,9 @@ class MainWindowController: NSWindowController {
         }
     }
     
-    func loadPasswordListView(validPassword: Bool){
-        if validPassword {
+    func attemptLoadPasswordListView(){
+        
+        if PasswordLibraryFactory.shared.validSessionActive() {
             let sceneIdentifier = NSStoryboard.SceneIdentifier("passwordList")
             let viewController = self.storyboard?.instantiateController(withIdentifier: sceneIdentifier)
                 as! NSViewController

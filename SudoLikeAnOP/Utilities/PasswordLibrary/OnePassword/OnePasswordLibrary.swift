@@ -4,23 +4,22 @@ class OnePasswordLibrary {
     let opExecutable:String = "op"
     let config = OnePasswordConfigManager.shared
     
-    private func signIn(password: String) -> Bool {
-        Log.debug("Retrieving an new session")
-        if (OnePasswordSessionManager.getStoredSession() == nil) {
-            do {
-                let session = try bash("echo \(password) | \(config.pathToOPBinary) signin my \(config.email) \(config.secretKey) --output=raw")
-                if session.exitCode == 0 {
-                    return OnePasswordSessionManager.createSession(session: session.stdout)
-                } else {
-                    Log.error("Error Sigining in: \(session.stderr)")
-                    return false
-                }
-            } catch let error as NSError {
-                Log.error("Error Signing in: \(error.description)")
-                return false
-            }
+    private func passwordShapeValidation(password: String) throws {
+        if password.count < 10 {
+            throw OnePasswordError.MinimumMasterPasswordError(
+                message: "Master Password must be greater than 10 Characters"
+            )
+        }
+    }
+    
+    private func signIn(password: String) throws {
+        Log.debug("Attempting SignIn")
+        let session = try bash("echo \(password) | \(config.pathToOPBinary) signin my \(config.email) \(config.secretKey) --output=raw")
+        if session.exitCode == 0 {
+            try OnePasswordSessionManager.createSession(session: session.stdout)
         } else {
-            return true
+            Log.error("Error Sigining in: \(session.stderr)")
+            throw OnePasswordError.SignInError(message: "Invalid Password")
         }
     }
     
@@ -75,8 +74,9 @@ class OnePasswordLibrary {
 }
 
 extension OnePasswordLibrary: PasswordLibrary {
-    func validateMasterPassword(password: String) -> Bool {
-        return signIn(password: password)
+    func validateMasterPassword(password: String) throws {
+        try passwordShapeValidation(password: password)
+        try signIn(password: password)
     }
     
     func retrievePasswordList() -> [PasswordListItem] {

@@ -8,7 +8,7 @@ class OnePasswordSessionManager {
     private static let tenMinutesInSeconds = OnePasswordConfigManager.shared.sessionExpirationMinutes * 60.0
     
     class func getStoredSession() -> String? {
-        Log.debug("Loading session from \(sessionFileURL.path)")
+        Log.debug("Session Manager: Loading session from \(sessionFileURL.path)")
         do {
             var fileContents:String = ""
             if FileManager.default.fileExists(atPath: sessionFileURL.path) {
@@ -22,18 +22,18 @@ class OnePasswordSessionManager {
                     return nil
                 }
             } else {
-                Log.debug("No session stored")
+                Log.debug("Session Manager: No session stored")
                 return nil
             }
             
         } catch let error as NSError {
-            Log.error("Unable to load session: \(error.description)")
+            Log.error("Session Manager unable to load session: \(error.description)")
             return nil
         }
     }
     
-    class func createSession(session: String) -> Bool {
-        Log.info("Storing new Session at \(sessionFileURL.path)")
+    class func createSession(session: String) throws {
+        Log.info("Session Manager: Storing new Session at \(sessionFileURL.path)")
         
         let newSession = Session(
             token: session,
@@ -51,11 +51,9 @@ class OnePasswordSessionManager {
             try ouputString.write(to: sessionFileURL, atomically: true, encoding: .utf8)
             
         } catch let error as NSError {
-            Log.error("Unable to store session: \(error.description)")
-            return false
+            Log.error("Session Manager unable to store session: \(error.description)")
+            throw OnePasswordError.SessionError(message: "Unable to create Session")
         }
-        
-        return true
     }
     
     struct Session: Codable {

@@ -4,30 +4,40 @@ class PasswordPromptController: NSViewController {
 
     @IBOutlet weak var passwordTextField: NSSecureTextField!
     
+    @IBOutlet weak var errorMessageLabel: NSTextField!
+    
     @IBAction func pushUnlockButton(_ sender: Any) {
+        errorMessageLabel.stringValue = ""
         passwordValidation(password: passwordTextField.stringValue)
     }
     
     @IBAction func submitTextField(_ sender: Any) {
+        errorMessageLabel.stringValue = ""
         passwordValidation(password: passwordTextField.stringValue)
     }
     
     func passwordValidation(password: String) {
-        // TODO: Validate not an empty string
         Log.debug("Valdiating Password")
-        let isValidPassword = PasswordLibraryFactory.shared.validateMasterPassword(password: password)
-        self.viewHasPassword(validPassword: isValidPassword)
+        do {
+            try PasswordLibraryFactory.shared.validateMasterPassword(password: password)
+            self.loadSessionView()
+        } catch let error as PasswordError {
+            errorMessageLabel.stringValue = error.message
+            Log.error("Returned error Message: \(error.message)")
+        } catch {
+            errorMessageLabel.stringValue = "Unable to Log In"
+            Log.error("Error valdiating password: \(error.localizedDescription)")
+        }
     }
     
     override func viewWillAppear() {
-        // called immediately before view appears
-        let sessionActive = PasswordLibraryFactory.shared.validSessionActive()
-        self.viewHasPassword(validPassword: sessionActive)
+        errorMessageLabel.stringValue = ""
+        self.loadSessionView()
     }
     
-    func viewHasPassword(validPassword: Bool){
+    func loadSessionView(){
         let windowController: MainWindowController = self.view.window?.windowController as! MainWindowController
-        windowController.loadPasswordListView(validPassword: validPassword)
+        windowController.attemptLoadPasswordListView()
     }
     
 }

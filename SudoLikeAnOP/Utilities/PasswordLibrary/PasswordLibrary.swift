@@ -1,7 +1,7 @@
 import Foundation
 
 protocol PasswordLibrary {
-    func validateMasterPassword(password: String) -> Bool
+    func validateMasterPassword(password: String) throws
     
     func retrievePasswordList() -> [PasswordListItem]
     

@@ -840,9 +840,19 @@
                                     <action selector="pushUnlockButton:" target="6Fu-n3-ZzI" id="drJ-1w-G93"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="la6-YM-SgI">
+                                <rect key="frame" x="109" y="180" width="232" height="37"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" title="Error Message" id="DXw-WT-Cqy">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="errorMessageLabel" destination="la6-YM-SgI" id="cMC-aN-YEC"/>
                         <outlet property="passwordTextField" destination="adT-Pd-Ibd" id="3rs-c5-o5E"/>
                     </connections>
                 </viewController>
