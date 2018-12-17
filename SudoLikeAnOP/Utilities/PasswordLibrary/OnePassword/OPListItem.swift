@@ -13,4 +13,15 @@ struct OPListItem: Codable {
     struct OPUrl: Codable {
         var u: String
     }
+    
+    func toPasswordListItem() -> PasswordListItem {
+        return PasswordListItem(
+            uuid: self.uuid,
+            name: self.overview.title,
+            urls: self.overview.URLs.map({ (opUrls) -> [String] in
+                opUrls.map({ (opUrl) -> String in opUrl.u })
+            }),
+            tags: self.tags
+        )
+    }
 }

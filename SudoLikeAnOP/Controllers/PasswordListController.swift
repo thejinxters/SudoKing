@@ -4,25 +4,25 @@ class PasswordListController: NSViewController {
     @IBOutlet weak var searchField: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
     
-    let fetchedPasswords: [PasswordListItem] = PasswordLibraryFactory.shared.retrievePasswordList()
+    let fetchedPasswordsOpt: [PasswordListItem]? = try? PasswordLibraryFactory.shared.retrievePasswordList()
     var passwords: [PasswordListItem] = []
     
     func filterPasswords() {
-        let searchString = searchField.stringValue.lowercased()
-        if (searchString.count > 0){
-            passwords = fetchedPasswords.filter { (passwordItem) -> Bool in
-                passwordItem.name.lowercased().contains(searchString)
+        if fetchedPasswordsOpt != nil {
+            let searchString = searchField.stringValue.lowercased()
+            if (searchString.count > 0){
+                passwords = fetchedPasswordsOpt!.filter { $0.name.lowercased().contains(searchString) }
+            } else {
+                passwords = fetchedPasswordsOpt!
             }
-        } else {
-            passwords = fetchedPasswords
+            tableView.reloadData()
+            selectFirstRow()
         }
-        tableView.reloadData()
-        selectFirstRow()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        passwords = fetchedPasswords
+        passwords = fetchedPasswordsOpt ?? [] // TODO: should report an error if nothing can load
         searchField.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
@@ -41,7 +41,8 @@ class PasswordListController: NSViewController {
         case 36: // Return
             if (tableView.numberOfRows > 0){
                 let uuid = passwords[tableView.selectedRow].uuid
-                print(PasswordLibraryFactory.shared.retrievePassword(uuid: uuid) ?? "")
+                let password: String? = try? PasswordLibraryFactory.shared.retrievePassword(uuid: uuid)
+                print(password ?? "")
                 self.view.window?.close()
             }
             break
@@ -58,14 +59,12 @@ class PasswordListController: NSViewController {
 }
 
 extension PasswordListController: NSTableViewDataSource {
-    
     func numberOfRows(in tableView: NSTableView) -> Int {
         return passwords.count
     }
 }
 
 extension PasswordListController: NSTableViewDelegate {
-    
     fileprivate enum CellIdentifiers {
         static let NameCell = "PasswordCellID"
     }

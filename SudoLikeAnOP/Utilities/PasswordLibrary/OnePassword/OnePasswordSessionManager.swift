@@ -7,7 +7,7 @@ class OnePasswordSessionManager {
     private static let sessionFileURL = settingsDirectoryURL.appendingPathComponent("session")
     private static let tenMinutesInSeconds = OnePasswordConfigManager.shared.sessionExpirationMinutes * 60.0
     
-    class func getStoredSession() -> String? {
+    class func getStoredSessionToken() -> String? {
         Log.debug("Session Manager: Loading session from \(sessionFileURL.path)")
         do {
             var fileContents:String = ""
