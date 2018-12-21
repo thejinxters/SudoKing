@@ -14,61 +14,65 @@ class OnePasswordLibrary {
     
     private func signIn(password: String) throws {
         Log.debug("Attempting SignIn")
-        let sessionResponse = try bash("echo \(password) | \(config.pathToOPBinary) signin my \(config.email) \(config.secretKey) --output=raw")
-        if sessionResponse.exitCode == 0 {
-            try OnePasswordSessionManager.createSession(session: sessionResponse.stdout)
-        } else {
-            Log.error("Error Sigining in: \(sessionResponse.stderr)")
-            throw OnePasswordError.SignInError(message: "Invalid Password")
+        try OnePasswordCli.opCli(
+            binary: "echo \(password) | \(config.pathToOPBinary)",
+            command: "signin my \(config.email) \(config.secretKey) --output=raw",
+            friendlyError: "Invalid Password"
+        ) { (sessionResponse) in
+            if sessionResponse.exitCode == 0 {
+                try OnePasswordSessionManager.createSession(session: sessionResponse.stdout)
+            } else {
+                throw OnePasswordError.OnePasswordCliError(message: "Invalid Password")
+            }
         }
     }
     
     private func listPasswords() throws -> String {
         let sessonToken = OnePasswordSessionManager.getStoredSessionToken()!
         Log.debug("Retrieving list of OP Items")
-        do {
-            let listResponse = try bash("\(config.pathToOPBinary) list items --session=\(sessonToken)")
-            return listResponse.stdout
-        } catch let error as NSError {
-            Log.error("Unable to retrieve OP items: \(error.description)")
-            throw OnePasswordError.ListRetrievalError(message: "Unable to retrieve password list")
-        }
+        return try OnePasswordCli.opCli(
+            binary: config.pathToOPBinary,
+            command: "list items --session=\(sessonToken)",
+            friendlyError: "Unable to retrieve password list"
+        )
     }
     
     private func getPassword(_ uuid: String) throws -> String {
         let session = OnePasswordSessionManager.getStoredSessionToken()!
-        do {
-            return try bash("\(config.pathToOPBinary) get item \(uuid) --session=\(session)").stdout
-        } catch let error as NSError {
-            Log.error("Error getting Password: \(error.description)")
-            throw OnePasswordError.PasswordRetrievalError(message: "Unable to retrieve password")
-        }
+        return try OnePasswordCli.opCli(
+            binary: config.pathToOPBinary,
+            command: "get item \(uuid) --session=\(session)",
+            friendlyError: "Unable to retrieve password"
+        )
     }
     
     private func convertJsonToPasswordListItem(_ passwordListString: String) throws -> [OPListItem] {
-        var list: [OPListItem] = []
-        do {
-            let decoder = JSONDecoder()
-            let data = passwordListString.data(using: .utf8)!
-            list = try decoder.decode([OPListItem].self, from: data)
-        } catch let error as NSError {
-            Log.error("Unable to parse json: \(error.description)")
-            throw OnePasswordError.JsonParseError(message: "Unable parse response from 1Password for password list retrieval")
-        }
-        return list
+        return try readJsonAs(
+            type: [OPListItem].self,
+            dataString: passwordListString,
+            friendlyError: "Unable parse response from 1Password for password list retrieval"
+        ) ?? []
     }
     
     private func convertJsonToPasswordItem(_ passwordDataString: String) throws -> OPPasswordItem {
-        var item: OPPasswordItem?
+        return try readJsonAs(
+            type: OPPasswordItem.self,
+            dataString: passwordDataString,
+            friendlyError: "Unable to parse response from 1Password for password retrieval"
+        )!
+    }
+    
+    private func readJsonAs<T>(type: T.Type, dataString: String, friendlyError: String) throws -> T? where T : Decodable {
+        var item: T?
         do {
             let decoder = JSONDecoder()
-            let data = passwordDataString.data(using: .utf8)!
-            item = try decoder.decode(OPPasswordItem.self, from: data)
+            let data = dataString.data(using: .utf8)!
+            item = try decoder.decode(type, from: data)
         } catch let error as NSError {
             Log.error("Unable to parse json: \(error.description)")
-            throw OnePasswordError.JsonParseError(message: "Unable to parse response from 1Password for password retrieval")
+            throw OnePasswordError.JsonParseError(message: "friendlyError")
         }
-        return item!
+        return item
     }
 }
 

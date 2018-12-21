@@ -17,6 +17,7 @@
 		7038FD9E21B9A43400AE26BA /* OnePasswordConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7038FD9D21B9A43400AE26BA /* OnePasswordConfig.swift */; };
 		7038FDA321B9A4C600AE26BA /* OnePasswordSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7038FDA221B9A4C600AE26BA /* OnePasswordSessionManager.swift */; };
 		7038FDA521BAD63400AE26BA /* BashUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7038FDA421BAD63400AE26BA /* BashUtility.swift */; };
+		706E89EC21CDA294009A633C /* OnePasswordCli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E89EB21CDA294009A633C /* OnePasswordCli.swift */; };
 		7090347421A86914002C3FF1 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7090347321A86914002C3FF1 /* Log.swift */; };
 		7090347721A8A4AC002C3FF1 /* OnePasswordLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7090347621A8A4AC002C3FF1 /* OnePasswordLibrary.swift */; };
 		70969B8121A842E200E7D011 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70969B8021A842E200E7D011 /* MainWindowController.swift */; };
@@ -40,6 +41,7 @@
 		7038FD9D21B9A43400AE26BA /* OnePasswordConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordConfig.swift; sourceTree = "<group>"; };
 		7038FDA221B9A4C600AE26BA /* OnePasswordSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordSessionManager.swift; sourceTree = "<group>"; };
 		7038FDA421BAD63400AE26BA /* BashUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BashUtility.swift; sourceTree = "<group>"; };
+		706E89EB21CDA294009A633C /* OnePasswordCli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordCli.swift; sourceTree = "<group>"; };
 		7090347321A86914002C3FF1 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		7090347621A8A4AC002C3FF1 /* OnePasswordLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordLibrary.swift; sourceTree = "<group>"; };
 		70969B8021A842E200E7D011 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				7038FD9D21B9A43400AE26BA /* OnePasswordConfig.swift */,
 				7038FDA221B9A4C600AE26BA /* OnePasswordSessionManager.swift */,
 				7096F33321BB37140048585D /* OnePasswordConfigManager.swift */,
+				706E89EB21CDA294009A633C /* OnePasswordCli.swift */,
 			);
 			path = OnePassword;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				B2BA67032199EC6A00ABC44A /* AppDelegate.swift in Sources */,
 				7038FD9E21B9A43400AE26BA /* OnePasswordConfig.swift in Sources */,
 				7030669621C6AEBF007488C8 /* OnePasswordError.swift in Sources */,
+				706E89EC21CDA294009A633C /* OnePasswordCli.swift in Sources */,
 				70969B8521A8473100E7D011 /* PasswordPromptController.swift in Sources */,
 				7030669421C6A23F007488C8 /* PasswordError.swift in Sources */,
 				70969B8121A842E200E7D011 /* MainWindowController.swift in Sources */,

@@ -5,6 +5,7 @@ enum OnePasswordError: PasswordError {
     case SignInError(message: String)
     case ListRetrievalError(message: String)
     case PasswordRetrievalError(message: String)
+    case OnePasswordCliError(message: String)
     case JsonParseError(message: String)
     case SessionError(message: String)
 }
@@ -19,6 +20,8 @@ extension OnePasswordError {
         case let .ListRetrievalError(message):
             return message
         case let .PasswordRetrievalError(message):
+            return message
+        case let .OnePasswordCliError(message):
             return message
         case let .JsonParseError(message):
             return message

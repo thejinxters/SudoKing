@@ -19,9 +19,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidResignActive(_ notification: Notification) {
-        Log.info("applicaiton lost focus")
+        Log.info("App lost focus")
         NSApp.windows.forEach { (window) in
-            window.close()
+//            window.close()
         }
     }
 }
