@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "706E89F021CDA479009A633C"
+               BuildableName = "SudoLikeAnOPTests.xctest"
+               BlueprintName = "SudoLikeAnOPTests"
+               ReferencedContainer = "container:SudoLikeAnOP.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

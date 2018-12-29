@@ -18,17 +18,32 @@
 		7038FDA321B9A4C600AE26BA /* OnePasswordSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7038FDA221B9A4C600AE26BA /* OnePasswordSessionManager.swift */; };
 		7038FDA521BAD63400AE26BA /* BashUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7038FDA421BAD63400AE26BA /* BashUtility.swift */; };
 		706E89EC21CDA294009A633C /* OnePasswordCli.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E89EB21CDA294009A633C /* OnePasswordCli.swift */; };
+		706E89F421CDA479009A633C /* OnePasswordLibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E89F321CDA479009A633C /* OnePasswordLibraryTests.swift */; };
+		706E89FC21CDD979009A633C /* BashUtilitySpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E89FB21CDD979009A633C /* BashUtilitySpy.swift */; };
+		706E89FF21CDE137009A633C /* OnePasswordSessionManagerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E89FE21CDE137009A633C /* OnePasswordSessionManagerSpy.swift */; };
+		706E8A0221CEC6F4009A633C /* GetPasswordResponses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706E8A0121CEC6F4009A633C /* GetPasswordResponses.swift */; };
 		7090347421A86914002C3FF1 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7090347321A86914002C3FF1 /* Log.swift */; };
 		7090347721A8A4AC002C3FF1 /* OnePasswordLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7090347621A8A4AC002C3FF1 /* OnePasswordLibrary.swift */; };
 		70969B8121A842E200E7D011 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70969B8021A842E200E7D011 /* MainWindowController.swift */; };
 		70969B8521A8473100E7D011 /* PasswordPromptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70969B8421A8473100E7D011 /* PasswordPromptController.swift */; };
 		7096F33421BB37140048585D /* OnePasswordConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096F33321BB37140048585D /* OnePasswordConfigManager.swift */; };
 		70AE4EA921BC1C0F009BE836 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 70AE4EA821BC1C0F009BE836 /* README.md */; };
+		70CC0C5921D8148B00BBE531 /* ListItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CC0C5821D8148B00BBE531 /* ListItemsResponse.swift */; };
 		B2A6DF7F21A6083C0033BB21 /* PasswordListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */; };
 		B2BA67032199EC6A00ABC44A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA67022199EC6A00ABC44A /* AppDelegate.swift */; };
 		B2BA67072199EC6B00ABC44A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BA67062199EC6B00ABC44A /* Assets.xcassets */; };
 		B2BA670A2199EC6C00ABC44A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BA67082199EC6C00ABC44A /* Main.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		706E89F621CDA479009A633C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2BA66F72199EC6A00ABC44A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2BA66FE2199EC6A00ABC44A;
+			remoteInfo = SudoLikeAnOP;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7030669321C6A23F007488C8 /* PasswordError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordError.swift; sourceTree = "<group>"; };
@@ -42,12 +57,19 @@
 		7038FDA221B9A4C600AE26BA /* OnePasswordSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordSessionManager.swift; sourceTree = "<group>"; };
 		7038FDA421BAD63400AE26BA /* BashUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BashUtility.swift; sourceTree = "<group>"; };
 		706E89EB21CDA294009A633C /* OnePasswordCli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordCli.swift; sourceTree = "<group>"; };
+		706E89F121CDA479009A633C /* SudoLikeAnOPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudoLikeAnOPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		706E89F321CDA479009A633C /* OnePasswordLibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordLibraryTests.swift; sourceTree = "<group>"; };
+		706E89F521CDA479009A633C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		706E89FB21CDD979009A633C /* BashUtilitySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BashUtilitySpy.swift; sourceTree = "<group>"; };
+		706E89FE21CDE137009A633C /* OnePasswordSessionManagerSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordSessionManagerSpy.swift; sourceTree = "<group>"; };
+		706E8A0121CEC6F4009A633C /* GetPasswordResponses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPasswordResponses.swift; sourceTree = "<group>"; };
 		7090347321A86914002C3FF1 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		7090347621A8A4AC002C3FF1 /* OnePasswordLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordLibrary.swift; sourceTree = "<group>"; };
 		70969B8021A842E200E7D011 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		70969B8421A8473100E7D011 /* PasswordPromptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordPromptController.swift; sourceTree = "<group>"; };
 		7096F33321BB37140048585D /* OnePasswordConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordConfigManager.swift; sourceTree = "<group>"; };
 		70AE4EA821BC1C0F009BE836 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		70CC0C5821D8148B00BBE531 /* ListItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsResponse.swift; sourceTree = "<group>"; };
 		B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListController.swift; sourceTree = "<group>"; };
 		B2BA66FF2199EC6A00ABC44A /* SudoLikeAnOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudoLikeAnOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BA67022199EC6A00ABC44A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +80,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		706E89EE21CDA479009A633C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2BA66FC2199EC6A00ABC44A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,6 +124,35 @@
 			path = OnePassword;
 			sourceTree = "<group>";
 		};
+		706E89F221CDA479009A633C /* SudoLikeAnOPTests */ = {
+			isa = PBXGroup;
+			children = (
+				706E8A0021CEC6CF009A633C /* fixtures */,
+				706E89FD21CDE0DD009A633C /* spys */,
+				706E89F321CDA479009A633C /* OnePasswordLibraryTests.swift */,
+				706E89F521CDA479009A633C /* Info.plist */,
+			);
+			path = SudoLikeAnOPTests;
+			sourceTree = "<group>";
+		};
+		706E89FD21CDE0DD009A633C /* spys */ = {
+			isa = PBXGroup;
+			children = (
+				706E89FB21CDD979009A633C /* BashUtilitySpy.swift */,
+				706E89FE21CDE137009A633C /* OnePasswordSessionManagerSpy.swift */,
+			);
+			path = spys;
+			sourceTree = "<group>";
+		};
+		706E8A0021CEC6CF009A633C /* fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				706E8A0121CEC6F4009A633C /* GetPasswordResponses.swift */,
+				70CC0C5821D8148B00BBE531 /* ListItemsResponse.swift */,
+			);
+			path = fixtures;
+			sourceTree = "<group>";
+		};
 		7090347221A866E5002C3FF1 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				B2BA67012199EC6A00ABC44A /* SudoLikeAnOP */,
+				706E89F221CDA479009A633C /* SudoLikeAnOPTests */,
 				B2BA67002199EC6A00ABC44A /* Products */,
 				70AE4EA821BC1C0F009BE836 /* README.md */,
 			);
@@ -128,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				B2BA66FF2199EC6A00ABC44A /* SudoLikeAnOP.app */,
+				706E89F121CDA479009A633C /* SudoLikeAnOPTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +209,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		706E89F021CDA479009A633C /* SudoLikeAnOPTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 706E89FA21CDA479009A633C /* Build configuration list for PBXNativeTarget "SudoLikeAnOPTests" */;
+			buildPhases = (
+				706E89ED21CDA479009A633C /* Sources */,
+				706E89EE21CDA479009A633C /* Frameworks */,
+				706E89EF21CDA479009A633C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				706E89F721CDA479009A633C /* PBXTargetDependency */,
+			);
+			name = SudoLikeAnOPTests;
+			productName = SudoLikeAnOPTests;
+			productReference = 706E89F121CDA479009A633C /* SudoLikeAnOPTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B2BA66FE2199EC6A00ABC44A /* SudoLikeAnOP */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B2BA67252199EC6C00ABC44A /* Build configuration list for PBXNativeTarget "SudoLikeAnOP" */;
@@ -176,6 +254,10 @@
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Russell Teabeault";
 				TargetAttributes = {
+					706E89F021CDA479009A633C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B2BA66FE2199EC6A00ABC44A;
+					};
 					B2BA66FE2199EC6A00ABC44A = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
@@ -200,11 +282,19 @@
 			projectRoot = "";
 			targets = (
 				B2BA66FE2199EC6A00ABC44A /* SudoLikeAnOP */,
+				706E89F021CDA479009A633C /* SudoLikeAnOPTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		706E89EF21CDA479009A633C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2BA66FD2199EC6A00ABC44A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -218,6 +308,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		706E89ED21CDA479009A633C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70CC0C5921D8148B00BBE531 /* ListItemsResponse.swift in Sources */,
+				706E89F421CDA479009A633C /* OnePasswordLibraryTests.swift in Sources */,
+				706E89FF21CDE137009A633C /* OnePasswordSessionManagerSpy.swift in Sources */,
+				706E8A0221CEC6F4009A633C /* GetPasswordResponses.swift in Sources */,
+				706E89FC21CDD979009A633C /* BashUtilitySpy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B2BA66FB2199EC6A00ABC44A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,6 +347,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		706E89F721CDA479009A633C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2BA66FE2199EC6A00ABC44A /* SudoLikeAnOP */;
+			targetProxy = 706E89F621CDA479009A633C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		B2BA67082199EC6C00ABC44A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -257,6 +367,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		706E89F821CDA479009A633C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SudoLikeAnOPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sudolikeanop.SudoLikeAnOPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SudoLikeAnOP.app/Contents/MacOS/SudoLikeAnOP";
+			};
+			name = Debug;
+		};
+		706E89F921CDA479009A633C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SudoLikeAnOPTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sudolikeanop.SudoLikeAnOPTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SudoLikeAnOP.app/Contents/MacOS/SudoLikeAnOP";
+			};
+			name = Release;
+		};
 		B2BA67232199EC6C00ABC44A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -409,6 +557,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		706E89FA21CDA479009A633C /* Build configuration list for PBXNativeTarget "SudoLikeAnOPTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				706E89F821CDA479009A633C /* Debug */,
+				706E89F921CDA479009A633C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B2BA66FA2199EC6A00ABC44A /* Build configuration list for PBXProject "SudoLikeAnOP" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

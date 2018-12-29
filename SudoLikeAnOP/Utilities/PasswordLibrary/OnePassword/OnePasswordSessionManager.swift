@@ -2,12 +2,19 @@ import Foundation
 
 class OnePasswordSessionManager {
     
-    private static let homeURL = FileManager.default.homeDirectoryForCurrentUser
-    private static let settingsDirectoryURL = homeURL.appendingPathComponent(".sudolikeanop")
-    private static let sessionFileURL = settingsDirectoryURL.appendingPathComponent("session")
-    private static let tenMinutesInSeconds = OnePasswordConfigManager.shared.sessionExpirationMinutes * 60.0
+    private let homeURL: URL
+    private let settingsDirectoryURL: URL
+    private let sessionFileURL: URL
+    private let sessionExpirationInSeconds: Double
     
-    class func getStoredSessionToken() -> String? {
+    init(config: OnePasswordConfig) {
+        homeURL = FileManager.default.homeDirectoryForCurrentUser
+        settingsDirectoryURL = homeURL.appendingPathComponent(".sudolikeanop")
+        sessionFileURL = settingsDirectoryURL.appendingPathComponent("session")
+        sessionExpirationInSeconds = config.sessionExpirationMinutes * 60.0
+    }
+    
+    func getStoredSessionToken() -> String? {
         Log.debug("Session Manager: Loading session from \(sessionFileURL.path)")
         do {
             var fileContents:String = ""
@@ -32,12 +39,12 @@ class OnePasswordSessionManager {
         }
     }
     
-    class func createSession(session: String) throws {
+    func createSession(session: String) throws {
         Log.info("Session Manager: Storing new Session at \(sessionFileURL.path)")
         
         let newSession = Session(
             token: session,
-            expiration: Date().addingTimeInterval(tenMinutesInSeconds)
+            expiration: Date().addingTimeInterval(sessionExpirationInSeconds)
         )
         do {
             let encoder = JSONEncoder()

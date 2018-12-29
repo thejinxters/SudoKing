@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "706E89F021CDA479009A633C"
+               BuildableName = "SudoLikeAnOPTests.xctest"
+               BlueprintName = "SudoLikeAnOPTests"
+               ReferencedContainer = "container:SudoLikeAnOP.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B2BA66FE2199EC6A00ABC44A"
+            BuildableName = "SudoLikeAnOP.app"
+            BlueprintName = "SudoLikeAnOP"
+            ReferencedContainer = "container:SudoLikeAnOP.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -60,6 +79,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "B2BA66FE2199EC6A00ABC44A"
+            BuildableName = "SudoLikeAnOP.app"
+            BlueprintName = "SudoLikeAnOP"
+            ReferencedContainer = "container:SudoLikeAnOP.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

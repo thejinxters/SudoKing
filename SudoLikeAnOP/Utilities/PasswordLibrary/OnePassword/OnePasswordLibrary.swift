@@ -2,7 +2,15 @@ import Foundation
 
 class OnePasswordLibrary {
     let opExecutable:String = "op"
-    let config = OnePasswordConfigManager.shared
+    let config: OnePasswordConfig
+    let opCli: OnePasswordCli
+    let sessionManager: OnePasswordSessionManager
+    
+    init(config: OnePasswordConfig, cli: OnePasswordCli, sessionManager: OnePasswordSessionManager){
+        self.config = config
+        self.opCli = cli
+        self.sessionManager = sessionManager
+    }
     
     private func passwordShapeValidation(password: String) throws {
         if password.count < 10 {
@@ -14,13 +22,13 @@ class OnePasswordLibrary {
     
     private func signIn(password: String) throws {
         Log.debug("Attempting SignIn")
-        try OnePasswordCli.opCli(
+        try opCli.cli(
             binary: "echo \(password) | \(config.pathToOPBinary)",
             command: "signin my \(config.email) \(config.secretKey) --output=raw",
             friendlyError: "Invalid Password"
         ) { (sessionResponse) in
             if sessionResponse.exitCode == 0 {
-                try OnePasswordSessionManager.createSession(session: sessionResponse.stdout)
+                try self.sessionManager.createSession(session: sessionResponse.stdout)
             } else {
                 throw OnePasswordError.OnePasswordCliError(message: "Invalid Password")
             }
@@ -28,9 +36,9 @@ class OnePasswordLibrary {
     }
     
     private func listPasswords() throws -> String {
-        let sessonToken = OnePasswordSessionManager.getStoredSessionToken()!
+        let sessonToken = sessionManager.getStoredSessionToken()!
         Log.debug("Retrieving list of OP Items")
-        return try OnePasswordCli.opCli(
+        return try opCli.cli(
             binary: config.pathToOPBinary,
             command: "list items --session=\(sessonToken)",
             friendlyError: "Unable to retrieve password list"
@@ -38,8 +46,8 @@ class OnePasswordLibrary {
     }
     
     private func getPassword(_ uuid: String) throws -> String {
-        let session = OnePasswordSessionManager.getStoredSessionToken()!
-        return try OnePasswordCli.opCli(
+        let session = sessionManager.getStoredSessionToken()!
+        return try opCli.cli(
             binary: config.pathToOPBinary,
             command: "get item \(uuid) --session=\(session)",
             friendlyError: "Unable to retrieve password"
@@ -99,6 +107,6 @@ extension OnePasswordLibrary: PasswordLibrary {
     }
     
     func validSessionActive() -> Bool {
-        return OnePasswordSessionManager.getStoredSessionToken() != nil
+        return sessionManager.getStoredSessionToken() != nil
     }
 }

@@ -9,14 +9,21 @@
 import Foundation
 
 class OnePasswordCli {
-    @discardableResult static func opCli(
+    
+    let bash: BashUtility
+    
+    init(bashUtility: BashUtility){
+        self.bash = bashUtility
+    }
+    
+    @discardableResult func cli(
         binary: String,
         command: String,
         friendlyError: String,
-        fn: ((BashCommandResponse) throws -> Void)? = nil
+        fn: ((BashUtility.BashCommandResponse) throws -> Void)? = nil
         ) throws -> String {
         do{
-            let response = try bash("\(binary) \(command)")
+            let response = try bash.run("\(binary) \(command)")
             try fn.map { (runFn) -> Void in
                 try runFn(response)
             }
