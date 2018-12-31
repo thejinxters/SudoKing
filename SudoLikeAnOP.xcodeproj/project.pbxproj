@@ -28,6 +28,7 @@
 		70969B8521A8473100E7D011 /* PasswordPromptController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70969B8421A8473100E7D011 /* PasswordPromptController.swift */; };
 		7096F33421BB37140048585D /* OnePasswordConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096F33321BB37140048585D /* OnePasswordConfigManager.swift */; };
 		70AE4EA921BC1C0F009BE836 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 70AE4EA821BC1C0F009BE836 /* README.md */; };
+		70C7843A21D99810003AC37C /* KeyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7843921D99810003AC37C /* KeyCodes.swift */; };
 		70CC0C5921D8148B00BBE531 /* ListItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CC0C5821D8148B00BBE531 /* ListItemsResponse.swift */; };
 		B2A6DF7F21A6083C0033BB21 /* PasswordListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */; };
 		B2BA67032199EC6A00ABC44A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA67022199EC6A00ABC44A /* AppDelegate.swift */; };
@@ -69,6 +70,7 @@
 		70969B8421A8473100E7D011 /* PasswordPromptController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordPromptController.swift; sourceTree = "<group>"; };
 		7096F33321BB37140048585D /* OnePasswordConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordConfigManager.swift; sourceTree = "<group>"; };
 		70AE4EA821BC1C0F009BE836 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		70C7843921D99810003AC37C /* KeyCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCodes.swift; sourceTree = "<group>"; };
 		70CC0C5821D8148B00BBE531 /* ListItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsResponse.swift; sourceTree = "<group>"; };
 		B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListController.swift; sourceTree = "<group>"; };
 		B2BA66FF2199EC6A00ABC44A /* SudoLikeAnOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudoLikeAnOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,6 +161,7 @@
 				7038FD8F21B85C6700AE26BA /* PasswordLibrary */,
 				7090347321A86914002C3FF1 /* Log.swift */,
 				7038FDA421BAD63400AE26BA /* BashUtility.swift */,
+				70C7843921D99810003AC37C /* KeyCodes.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				7038FDA521BAD63400AE26BA /* BashUtility.swift in Sources */,
 				7038FDA321B9A4C600AE26BA /* OnePasswordSessionManager.swift in Sources */,
 				7038FD9621B8734500AE26BA /* PasswordLibraryFactory.swift in Sources */,
+				70C7843A21D99810003AC37C /* KeyCodes.swift in Sources */,
 				7090347421A86914002C3FF1 /* Log.swift in Sources */,
 				7096F33421BB37140048585D /* OnePasswordConfigManager.swift in Sources */,
 				7090347721A8A4AC002C3FF1 /* OnePasswordLibrary.swift in Sources */,

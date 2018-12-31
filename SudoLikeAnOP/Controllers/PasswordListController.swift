@@ -22,6 +22,9 @@ class PasswordListController: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        searchField.becomeFirstResponder()
+        tableView.refusesFirstResponder = true
+        
         passwords = fetchedPasswordsOpt ?? [] // TODO: should report an error if nothing can load
         searchField.delegate = self
         tableView.delegate = self
@@ -38,7 +41,13 @@ class PasswordListController: NSViewController {
     
     override func keyDown(with event: NSEvent){
         switch event.keyCode {
-        case 36: // Return
+        case KeyCodes.downArrow, KeyCodes.keypad8:
+            selectNextRow()
+            break
+        case KeyCodes.upArrow, KeyCodes.keypad2:
+            selectPreviousRow()
+            break
+        case KeyCodes.returnKey:
             if (tableView.numberOfRows > 0){
                 let uuid = passwords[tableView.selectedRow].uuid
                 let password: String? = try? PasswordLibraryFactory.shared.retrievePassword(uuid: uuid)
@@ -54,6 +63,20 @@ class PasswordListController: NSViewController {
     func selectFirstRow() {
         if (tableView.numberOfRows > 0){
             tableView.selectRowIndexes(.init(integer: 0), byExtendingSelection: false)
+        }
+    }
+    
+    func selectNextRow() {
+        if (tableView.numberOfRows > 0){
+            let indexToSelect = (tableView.selectedRow + 1) % tableView.numberOfRows
+            tableView.selectRowIndexes(.init(integer: indexToSelect), byExtendingSelection: false)
+        }
+    }
+    
+    func selectPreviousRow() {
+        if (tableView.numberOfRows > 0){
+            let indexToSelect = (tableView.selectedRow + tableView.numberOfRows - 1) % tableView.numberOfRows
+            tableView.selectRowIndexes(.init(integer: indexToSelect), byExtendingSelection: false)
         }
     }
 }
