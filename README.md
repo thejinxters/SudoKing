@@ -1,5 +1,5 @@
-Sudo Like An OP
-===============
+Sudo King
+=========
 
 
 ### Required packages:
@@ -9,7 +9,7 @@ op command line tool: `brew install op`
 
 ### Required config file:
 
-create a file with the following contents at `~/.sudolikeanop/config`
+create a file with the following contents at `~/.sudoking/config`
 ```javascript
 {
     "subdomain": "my", //subdomain, this is an example for my.1password.com
@@ -23,11 +23,11 @@ create a file with the following contents at `~/.sudolikeanop/config`
 
 ### Build Release:
 ```bash
-xcodebuild -project SudoLikeAnOP.xcodeproj
+xcodebuild -project SudoKing.xcodeproj
 ```
 
 ### Making it work in Iterm
 
-Assuming you have the SudoLikeAnOP code in your `~/Developer` folder
+Assuming you have the SudoKing code in your `~/Developer` folder
 Add a keyboard shortcut to iterm and choose the `Run Coprocess` command that runs the following:
-/Users/$USER/Developer/SudoLikeAnOP/build/Release/SudoLikeAnOP.app/Contents/MacOS/SudoLikeAnOP
+/Users/$USER/Developer/SudoKing/build/Release/SudoKing.app/Contents/MacOS/SudoKing

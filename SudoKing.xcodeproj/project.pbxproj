@@ -29,6 +29,7 @@
 		7096F33421BB37140048585D /* OnePasswordConfigManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7096F33321BB37140048585D /* OnePasswordConfigManager.swift */; };
 		70AE4EA921BC1C0F009BE836 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 70AE4EA821BC1C0F009BE836 /* README.md */; };
 		70C7843A21D99810003AC37C /* KeyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7843921D99810003AC37C /* KeyCodes.swift */; };
+		70C7844221DA8197003AC37C /* SudoKingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7844121DA8197003AC37C /* SudoKingUITests.swift */; };
 		70CC0C5921D8148B00BBE531 /* ListItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CC0C5821D8148B00BBE531 /* ListItemsResponse.swift */; };
 		B2A6DF7F21A6083C0033BB21 /* PasswordListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */; };
 		B2BA67032199EC6A00ABC44A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA67022199EC6A00ABC44A /* AppDelegate.swift */; };
@@ -42,7 +43,14 @@
 			containerPortal = B2BA66F72199EC6A00ABC44A /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B2BA66FE2199EC6A00ABC44A;
-			remoteInfo = SudoLikeAnOP;
+			remoteInfo = SudoKing;
+		};
+		70C7844421DA8197003AC37C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B2BA66F72199EC6A00ABC44A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B2BA66FE2199EC6A00ABC44A;
+			remoteInfo = SudoKing;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -58,7 +66,7 @@
 		7038FDA221B9A4C600AE26BA /* OnePasswordSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordSessionManager.swift; sourceTree = "<group>"; };
 		7038FDA421BAD63400AE26BA /* BashUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BashUtility.swift; sourceTree = "<group>"; };
 		706E89EB21CDA294009A633C /* OnePasswordCli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordCli.swift; sourceTree = "<group>"; };
-		706E89F121CDA479009A633C /* SudoLikeAnOPTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudoLikeAnOPTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		706E89F121CDA479009A633C /* SudoKingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudoKingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		706E89F321CDA479009A633C /* OnePasswordLibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordLibraryTests.swift; sourceTree = "<group>"; };
 		706E89F521CDA479009A633C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		706E89FB21CDD979009A633C /* BashUtilitySpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BashUtilitySpy.swift; sourceTree = "<group>"; };
@@ -71,18 +79,28 @@
 		7096F33321BB37140048585D /* OnePasswordConfigManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordConfigManager.swift; sourceTree = "<group>"; };
 		70AE4EA821BC1C0F009BE836 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		70C7843921D99810003AC37C /* KeyCodes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyCodes.swift; sourceTree = "<group>"; };
+		70C7843F21DA8197003AC37C /* SudoKingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudoKingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70C7844121DA8197003AC37C /* SudoKingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudoKingUITests.swift; sourceTree = "<group>"; };
+		70C7844321DA8197003AC37C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70CC0C5821D8148B00BBE531 /* ListItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsResponse.swift; sourceTree = "<group>"; };
 		B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListController.swift; sourceTree = "<group>"; };
-		B2BA66FF2199EC6A00ABC44A /* SudoLikeAnOP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudoLikeAnOP.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B2BA66FF2199EC6A00ABC44A /* SudoKing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudoKing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BA67022199EC6A00ABC44A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B2BA67062199EC6B00ABC44A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2BA67092199EC6C00ABC44A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2BA670B2199EC6C00ABC44A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B2BA670C2199EC6C00ABC44A /* SudoLikeAnOP.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SudoLikeAnOP.entitlements; sourceTree = "<group>"; };
+		B2BA670C2199EC6C00ABC44A /* SudoKing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SudoKing.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		706E89EE21CDA479009A633C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70C7843C21DA8197003AC37C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -126,7 +144,7 @@
 			path = OnePassword;
 			sourceTree = "<group>";
 		};
-		706E89F221CDA479009A633C /* SudoLikeAnOPTests */ = {
+		706E89F221CDA479009A633C /* SudoKingTests */ = {
 			isa = PBXGroup;
 			children = (
 				706E8A0021CEC6CF009A633C /* fixtures */,
@@ -134,7 +152,7 @@
 				706E89F321CDA479009A633C /* OnePasswordLibraryTests.swift */,
 				706E89F521CDA479009A633C /* Info.plist */,
 			);
-			path = SudoLikeAnOPTests;
+			path = SudoKingTests;
 			sourceTree = "<group>";
 		};
 		706E89FD21CDE0DD009A633C /* spys */ = {
@@ -176,11 +194,21 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		70C7844021DA8197003AC37C /* SudoKingUITests */ = {
+			isa = PBXGroup;
+			children = (
+				70C7844121DA8197003AC37C /* SudoKingUITests.swift */,
+				70C7844321DA8197003AC37C /* Info.plist */,
+			);
+			path = SudoKingUITests;
+			sourceTree = "<group>";
+		};
 		B2BA66F62199EC6A00ABC44A = {
 			isa = PBXGroup;
 			children = (
-				B2BA67012199EC6A00ABC44A /* SudoLikeAnOP */,
-				706E89F221CDA479009A633C /* SudoLikeAnOPTests */,
+				B2BA67012199EC6A00ABC44A /* SudoKing */,
+				706E89F221CDA479009A633C /* SudoKingTests */,
+				70C7844021DA8197003AC37C /* SudoKingUITests */,
 				B2BA67002199EC6A00ABC44A /* Products */,
 				70AE4EA821BC1C0F009BE836 /* README.md */,
 			);
@@ -189,13 +217,14 @@
 		B2BA67002199EC6A00ABC44A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B2BA66FF2199EC6A00ABC44A /* SudoLikeAnOP.app */,
-				706E89F121CDA479009A633C /* SudoLikeAnOPTests.xctest */,
+				B2BA66FF2199EC6A00ABC44A /* SudoKing.app */,
+				706E89F121CDA479009A633C /* SudoKingTests.xctest */,
+				70C7843F21DA8197003AC37C /* SudoKingUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B2BA67012199EC6A00ABC44A /* SudoLikeAnOP */ = {
+		B2BA67012199EC6A00ABC44A /* SudoKing */ = {
 			isa = PBXGroup;
 			children = (
 				7090347221A866E5002C3FF1 /* Utilities */,
@@ -203,18 +232,18 @@
 				B2BA67022199EC6A00ABC44A /* AppDelegate.swift */,
 				B2BA67062199EC6B00ABC44A /* Assets.xcassets */,
 				B2BA670B2199EC6C00ABC44A /* Info.plist */,
-				B2BA670C2199EC6C00ABC44A /* SudoLikeAnOP.entitlements */,
+				B2BA670C2199EC6C00ABC44A /* SudoKing.entitlements */,
 				B2BA67082199EC6C00ABC44A /* Main.storyboard */,
 			);
-			path = SudoLikeAnOP;
+			path = SudoKing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		706E89F021CDA479009A633C /* SudoLikeAnOPTests */ = {
+		706E89F021CDA479009A633C /* SudoKingTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 706E89FA21CDA479009A633C /* Build configuration list for PBXNativeTarget "SudoLikeAnOPTests" */;
+			buildConfigurationList = 706E89FA21CDA479009A633C /* Build configuration list for PBXNativeTarget "SudoKingTests" */;
 			buildPhases = (
 				706E89ED21CDA479009A633C /* Sources */,
 				706E89EE21CDA479009A633C /* Frameworks */,
@@ -225,14 +254,32 @@
 			dependencies = (
 				706E89F721CDA479009A633C /* PBXTargetDependency */,
 			);
-			name = SudoLikeAnOPTests;
-			productName = SudoLikeAnOPTests;
-			productReference = 706E89F121CDA479009A633C /* SudoLikeAnOPTests.xctest */;
+			name = SudoKingTests;
+			productName = SudoKingTests;
+			productReference = 706E89F121CDA479009A633C /* SudoKingTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B2BA66FE2199EC6A00ABC44A /* SudoLikeAnOP */ = {
+		70C7843E21DA8197003AC37C /* SudoKingUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B2BA67252199EC6C00ABC44A /* Build configuration list for PBXNativeTarget "SudoLikeAnOP" */;
+			buildConfigurationList = 70C7844821DA8197003AC37C /* Build configuration list for PBXNativeTarget "SudoKingUITests" */;
+			buildPhases = (
+				70C7843B21DA8197003AC37C /* Sources */,
+				70C7843C21DA8197003AC37C /* Frameworks */,
+				70C7843D21DA8197003AC37C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70C7844521DA8197003AC37C /* PBXTargetDependency */,
+			);
+			name = SudoKingUITests;
+			productName = SudoKingUITests;
+			productReference = 70C7843F21DA8197003AC37C /* SudoKingUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		B2BA66FE2199EC6A00ABC44A /* SudoKing */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2BA67252199EC6C00ABC44A /* Build configuration list for PBXNativeTarget "SudoKing" */;
 			buildPhases = (
 				B2BA66FB2199EC6A00ABC44A /* Sources */,
 				B2BA66FC2199EC6A00ABC44A /* Frameworks */,
@@ -242,9 +289,9 @@
 			);
 			dependencies = (
 			);
-			name = SudoLikeAnOP;
-			productName = SudoLikeAnOP;
-			productReference = B2BA66FF2199EC6A00ABC44A /* SudoLikeAnOP.app */;
+			name = SudoKing;
+			productName = SudoKing;
+			productReference = B2BA66FF2199EC6A00ABC44A /* SudoKing.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -261,6 +308,10 @@
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = B2BA66FE2199EC6A00ABC44A;
 					};
+					70C7843E21DA8197003AC37C = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = B2BA66FE2199EC6A00ABC44A;
+					};
 					B2BA66FE2199EC6A00ABC44A = {
 						CreatedOnToolsVersion = 10.1;
 						SystemCapabilities = {
@@ -271,7 +322,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B2BA66FA2199EC6A00ABC44A /* Build configuration list for PBXProject "SudoLikeAnOP" */;
+			buildConfigurationList = B2BA66FA2199EC6A00ABC44A /* Build configuration list for PBXProject "SudoKing" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -284,14 +335,22 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B2BA66FE2199EC6A00ABC44A /* SudoLikeAnOP */,
-				706E89F021CDA479009A633C /* SudoLikeAnOPTests */,
+				B2BA66FE2199EC6A00ABC44A /* SudoKing */,
+				706E89F021CDA479009A633C /* SudoKingTests */,
+				70C7843E21DA8197003AC37C /* SudoKingUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		706E89EF21CDA479009A633C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70C7843D21DA8197003AC37C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -320,6 +379,14 @@
 				706E89FF21CDE137009A633C /* OnePasswordSessionManagerSpy.swift in Sources */,
 				706E8A0221CEC6F4009A633C /* GetPasswordResponses.swift in Sources */,
 				706E89FC21CDD979009A633C /* BashUtilitySpy.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70C7843B21DA8197003AC37C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70C7844221DA8197003AC37C /* SudoKingUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,8 +421,13 @@
 /* Begin PBXTargetDependency section */
 		706E89F721CDA479009A633C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B2BA66FE2199EC6A00ABC44A /* SudoLikeAnOP */;
+			target = B2BA66FE2199EC6A00ABC44A /* SudoKing */;
 			targetProxy = 706E89F621CDA479009A633C /* PBXContainerItemProxy */;
+		};
+		70C7844521DA8197003AC37C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B2BA66FE2199EC6A00ABC44A /* SudoKing */;
+			targetProxy = 70C7844421DA8197003AC37C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -377,16 +449,16 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SudoLikeAnOPTests/Info.plist;
+				INFOPLIST_FILE = SudoKingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sudolikeanop.SudoLikeAnOPTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sudolikeanop.SudoKingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SudoLikeAnOP.app/Contents/MacOS/SudoLikeAnOP";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SudoKing.app/Contents/MacOS/SudoKing";
 			};
 			name = Debug;
 		};
@@ -396,16 +468,52 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SudoLikeAnOPTests/Info.plist;
+				INFOPLIST_FILE = SudoKingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sudolikeanop.SudoLikeAnOPTests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sudolikeanop.SudoKingTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SudoLikeAnOP.app/Contents/MacOS/SudoLikeAnOP";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SudoKing.app/Contents/MacOS/SudoKing";
+			};
+			name = Release;
+		};
+		70C7844621DA8197003AC37C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SudoKingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sudolikeanop.SudoKingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = SudoKing;
+			};
+			name = Debug;
+		};
+		70C7844721DA8197003AC37C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = SudoKingUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sudolikeanop.SudoKingUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TEST_TARGET_NAME = SudoKing;
 			};
 			name = Release;
 		};
@@ -530,12 +638,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SudoLikeAnOP/Info.plist;
+				INFOPLIST_FILE = SudoKing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = es.rusticul.SudoLikeAnOP;
+				PRODUCT_BUNDLE_IDENTIFIER = es.rusticul.SudoKing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -547,12 +655,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = SudoLikeAnOP/Info.plist;
+				INFOPLIST_FILE = SudoKing/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = es.rusticul.SudoLikeAnOP;
+				PRODUCT_BUNDLE_IDENTIFIER = es.rusticul.SudoKing;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 			};
@@ -561,7 +669,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		706E89FA21CDA479009A633C /* Build configuration list for PBXNativeTarget "SudoLikeAnOPTests" */ = {
+		706E89FA21CDA479009A633C /* Build configuration list for PBXNativeTarget "SudoKingTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				706E89F821CDA479009A633C /* Debug */,
@@ -570,7 +678,16 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B2BA66FA2199EC6A00ABC44A /* Build configuration list for PBXProject "SudoLikeAnOP" */ = {
+		70C7844821DA8197003AC37C /* Build configuration list for PBXNativeTarget "SudoKingUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70C7844621DA8197003AC37C /* Debug */,
+				70C7844721DA8197003AC37C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2BA66FA2199EC6A00ABC44A /* Build configuration list for PBXProject "SudoKing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B2BA67232199EC6C00ABC44A /* Debug */,
@@ -579,7 +696,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B2BA67252199EC6C00ABC44A /* Build configuration list for PBXNativeTarget "SudoLikeAnOP" */ = {
+		B2BA67252199EC6C00ABC44A /* Build configuration list for PBXNativeTarget "SudoKing" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B2BA67262199EC6C00ABC44A /* Debug */,

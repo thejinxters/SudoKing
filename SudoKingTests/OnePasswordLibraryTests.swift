@@ -1,5 +1,5 @@
 import XCTest
-@testable import SudoLikeAnOP
+@testable import SudoKing
 
 class OnePasswordLibraryTests: XCTestCase {
     var onePasswordConfig: OnePasswordConfig!

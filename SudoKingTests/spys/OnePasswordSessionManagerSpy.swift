@@ -1,5 +1,5 @@
 import Foundation
-@testable import SudoLikeAnOP
+@testable import SudoKing
 
 class OnePasswordSessionMangerSpy: OnePasswordSessionManager {
     

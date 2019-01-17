@@ -1,6 +1,6 @@
 //
 //  OnePasswordCli.swift
-//  SudoLikeAnOP
+//  SudoKing
 //
 //  Created by Brandon Mikulka on 12/21/18.
 //  Copyright © 2018 Russell Teabeault. All rights reserved.

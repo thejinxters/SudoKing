@@ -9,7 +9,7 @@ class OnePasswordSessionManager {
     
     init(config: OnePasswordConfig) {
         homeURL = FileManager.default.homeDirectoryForCurrentUser
-        settingsDirectoryURL = homeURL.appendingPathComponent(".sudolikeanop")
+        settingsDirectoryURL = homeURL.appendingPathComponent(".sudoking")
         sessionFileURL = settingsDirectoryURL.appendingPathComponent("session")
         sessionExpirationInSeconds = config.sessionExpirationMinutes * 60.0
     }

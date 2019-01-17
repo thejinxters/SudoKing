@@ -11,11 +11,11 @@
                 <application id="hnw-xV-0zn" sceneMemberID="viewController">
                     <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
                         <items>
-                            <menuItem title="SudoLikeAnOP" id="1Xt-HY-uBw">
+                            <menuItem title="SudoKing" id="1Xt-HY-uBw">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="SudoLikeAnOP" systemMenu="apple" id="uQy-DD-JDr">
+                                <menu key="submenu" title="SudoKing" systemMenu="apple" id="uQy-DD-JDr">
                                     <items>
-                                        <menuItem title="About SudoLikeAnOP" id="5kV-Vb-QxS">
+                                        <menuItem title="About SudoKing" id="5kV-Vb-QxS">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
@@ -29,7 +29,7 @@
                                             <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
-                                        <menuItem title="Hide SudoLikeAnOP" keyEquivalent="h" id="Olw-nP-bQN">
+                                        <menuItem title="Hide SudoKing" keyEquivalent="h" id="Olw-nP-bQN">
                                             <connections>
                                                 <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
                                             </connections>
@@ -47,7 +47,7 @@
                                             </connections>
                                         </menuItem>
                                         <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
-                                        <menuItem title="Quit SudoLikeAnOP" keyEquivalent="q" id="4sb-4s-VLi">
+                                        <menuItem title="Quit SudoKing" keyEquivalent="q" id="4sb-4s-VLi">
                                             <connections>
                                                 <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
                                             </connections>
@@ -660,7 +660,7 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="SudoLikeAnOP Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                        <menuItem title="SudoKing Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
                                             </connections>
@@ -674,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="SudoLikeAnOP" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="SudoKing" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -683,7 +683,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="MainWindowController" customModule="SudoLikeAnOP" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="MainWindowController" customModule="SudoKing" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Password" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -704,7 +704,7 @@
         <!--Password List Controller-->
         <scene sceneID="tyt-mU-o5H">
             <objects>
-                <viewController storyboardIdentifier="passwordList" id="YPb-Ss-NeC" customClass="PasswordListController" customModule="SudoLikeAnOP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="passwordList" id="YPb-Ss-NeC" customClass="PasswordListController" customModule="SudoKing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="LIS-QN-E0g">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -809,7 +809,7 @@
         <!--Password Prompt Controller-->
         <scene sceneID="dFR-2Q-93a">
             <objects>
-                <viewController title="Password Prompt Controller" id="6Fu-n3-ZzI" customClass="PasswordPromptController" customModule="SudoLikeAnOP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Password Prompt Controller" id="6Fu-n3-ZzI" customClass="PasswordPromptController" customModule="SudoKing" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="rlW-8v-Hyn">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -829,7 +829,7 @@
                                     <action selector="submitTextField:" target="6Fu-n3-ZzI" id="f3c-BX-0eL"/>
                                 </connections>
                             </secureTextField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mm1-ZU-Fmf">
+                            <button identifier="unlock" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mm1-ZU-Fmf">
                                 <rect key="frame" x="307" y="144" width="32" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ITw-Og-PzW">
@@ -840,7 +840,7 @@
                                     <action selector="pushUnlockButton:" target="6Fu-n3-ZzI" id="drJ-1w-G93"/>
                                 </connections>
                             </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="la6-YM-SgI">
+                            <textField identifier="errorMessage" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="la6-YM-SgI">
                                 <rect key="frame" x="109" y="180" width="232" height="37"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" title="Error Message" id="DXw-WT-Cqy">

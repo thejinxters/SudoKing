@@ -3,7 +3,7 @@ import Foundation
 
 class OnePasswordConfigManager {
     private static let homeURL = FileManager.default.homeDirectoryForCurrentUser
-    private static let settingsDirectoryURL = homeURL.appendingPathComponent(".sudolikeanop")
+    private static let settingsDirectoryURL = homeURL.appendingPathComponent(".sudoking")
     private static let configFileURL = settingsDirectoryURL.appendingPathComponent("config")
     
     static let shared: OnePasswordConfig = try! readJsonConfig()
@@ -15,7 +15,8 @@ class OnePasswordConfigManager {
             fileContents = try String(contentsOf: configFileURL)
         } else {
             Log.error("Config file does not exist")
-            throw ConfigLoaderError.configFileDoesNotExist
+            print("you must configure SudoKing before using it")
+            exit(1)
         }
         let decoder = JSONDecoder()
         let data = fileContents.data(using: .utf8)!
