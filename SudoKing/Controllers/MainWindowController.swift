@@ -4,6 +4,7 @@ class MainWindowController: NSWindowController {
     
     override func windowDidLoad() {
         Log.info("Sudo Like an OP loaded")
+        removeApplicaitonTitleBar()
         NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
             self.keyDown(with: $0)
             return $0
@@ -20,6 +21,11 @@ class MainWindowController: NSWindowController {
         }
     }
     
+    func removeApplicaitonTitleBar() {
+        self.window?.titleVisibility = NSWindow.TitleVisibility.hidden
+        self.window?.titlebarAppearsTransparent = true
+    }
+    
     func attemptLoadPasswordListView(){
         
         if PasswordLibraryFactory.shared.validSessionActive() {
@@ -29,5 +35,5 @@ class MainWindowController: NSWindowController {
             self.window?.contentViewController = viewController
         }
     }
-
+    
 }
