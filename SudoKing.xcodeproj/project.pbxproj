@@ -65,6 +65,8 @@
 		7038FD9D21B9A43400AE26BA /* OnePasswordConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordConfig.swift; sourceTree = "<group>"; };
 		7038FDA221B9A4C600AE26BA /* OnePasswordSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordSessionManager.swift; sourceTree = "<group>"; };
 		7038FDA421BAD63400AE26BA /* BashUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BashUtility.swift; sourceTree = "<group>"; };
+		703B26B121F388460001855A /* version.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = version.sh; sourceTree = "<group>"; };
+		703B26B321F38E670001855A /* sudoking.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = sudoking.sh; sourceTree = "<group>"; };
 		706E89EB21CDA294009A633C /* OnePasswordCli.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordCli.swift; sourceTree = "<group>"; };
 		706E89F121CDA479009A633C /* SudoKingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SudoKingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		706E89F321CDA479009A633C /* OnePasswordLibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnePasswordLibraryTests.swift; sourceTree = "<group>"; };
@@ -144,6 +146,15 @@
 			path = OnePassword;
 			sourceTree = "<group>";
 		};
+		703B26B221F38D4E0001855A /* homebrew */ = {
+			isa = PBXGroup;
+			children = (
+				703B26B121F388460001855A /* version.sh */,
+				703B26B321F38E670001855A /* sudoking.sh */,
+			);
+			path = homebrew;
+			sourceTree = "<group>";
+		};
 		706E89F221CDA479009A633C /* SudoKingTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +217,7 @@
 		B2BA66F62199EC6A00ABC44A = {
 			isa = PBXGroup;
 			children = (
+				703B26B221F38D4E0001855A /* homebrew */,
 				B2BA67012199EC6A00ABC44A /* SudoKing */,
 				706E89F221CDA479009A633C /* SudoKingTests */,
 				70C7844021DA8197003AC37C /* SudoKingUITests */,
