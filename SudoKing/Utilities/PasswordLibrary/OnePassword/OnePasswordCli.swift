@@ -27,6 +27,9 @@ class OnePasswordCli {
             try fn.map { (runFn) -> Void in
                 try runFn(response)
             }
+            if response.stderr.count > 0 {
+                Log.error(response.stderr)
+            }
             return response.stdout
         } catch let error as NSError {
             Log.error("Error running 'op \(command)': \(error.description)")

@@ -7,7 +7,8 @@ Access 1Password from iTerm, with this [1Password Cli](https://support.1password
 
 Install `op` and `sudoking` via homebrew:
 ```bash
-brew install op thejinxters/sudoking/sudoking
+brew cask install 1password-cli
+brew install thejinxters/sudoking/sudoking
 ```
 In your terminal, run:
 ```bash
