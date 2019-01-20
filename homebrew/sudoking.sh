@@ -3,8 +3,6 @@
 CONFIG_PATH=/Users/${USER}/.sudoking
 CONFIG_FILE=${CONFIG_PATH}/config
 
-rm $CONFIG_FILE
-
 checkForConfig(){
 if [[ ! -f ${CONFIG_FILE} ]]; then
     echo "Config file was not detected at ${configFile} \n";

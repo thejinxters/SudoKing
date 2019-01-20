@@ -1,15 +1,20 @@
 Sudo King
 =========
+Access 1Password from iTerm, with this [1Password Cli](https://support.1password.com/command-line/) wrapper
 
+## Getting Set Up
 
-### Required packages:
+Install `op` and `sudoking` via homebrew:
+```bash
+brew install op thejinxters/sudoking/sudoking
+```
+In your terminal, run:
+```bash
+sudoking
+```
 
-op command line tool: `brew install op`
-
-
-### Required config file:
-
-create a file with the following contents at `~/.sudoking/config`
+SudoKing will then prompt you your config settings and create a config file for you. 
+This file is located at `~/.sudoking/config` and looks like this:
 ```javascript
 {
     "subdomain": "my", //subdomain, this is an example for my.1password.com
@@ -20,14 +25,15 @@ create a file with the following contents at `~/.sudoking/config`
 }
 ```
 
+## Configure [iterm2](https://iterm2.com) to use `sudoking`
 
-### Build Release:
+After installing `sudoking`, you still need to configure [iterm2](https://iterm2.com). Just follow the instructions in the gif below:
+
+![configuration directions](https://raw.githubusercontent.com/thejinxters/SudoKing/master/img/sudoking-configure-iterm.gif)
+
+## Build Release:
 ```bash
-xcodebuild -project SudoKing.xcodeproj
+homebrew/version.sh <release_version>
 ```
 
-### Making it work in Iterm
 
-Assuming you have the SudoKing code in your `~/Developer` folder
-Add a keyboard shortcut to iterm and choose the `Run Coprocess` command that runs the following:
-/Users/$USER/Developer/SudoKing/build/Release/SudoKing.app/Contents/MacOS/SudoKing
