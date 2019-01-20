@@ -31,9 +31,11 @@
 		70C7843A21D99810003AC37C /* KeyCodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7843921D99810003AC37C /* KeyCodes.swift */; };
 		70C7844221DA8197003AC37C /* SudoKingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C7844121DA8197003AC37C /* SudoKingUITests.swift */; };
 		70CC0C5921D8148B00BBE531 /* ListItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CC0C5821D8148B00BBE531 /* ListItemsResponse.swift */; };
+		70EED80421F4DD3700F0118F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EED80321F4DD3700F0118F /* Colors.swift */; };
+		70EED80621F5276600F0118F /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70EED80521F5276600F0118F /* Animations.swift */; };
+		70EED80821F52F6E00F0118F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70EED80721F52F6E00F0118F /* Assets.xcassets */; };
 		B2A6DF7F21A6083C0033BB21 /* PasswordListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */; };
 		B2BA67032199EC6A00ABC44A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA67022199EC6A00ABC44A /* AppDelegate.swift */; };
-		B2BA67072199EC6B00ABC44A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BA67062199EC6B00ABC44A /* Assets.xcassets */; };
 		B2BA670A2199EC6C00ABC44A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BA67082199EC6C00ABC44A /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -86,10 +88,12 @@
 		70C7844121DA8197003AC37C /* SudoKingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SudoKingUITests.swift; sourceTree = "<group>"; };
 		70C7844321DA8197003AC37C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70CC0C5821D8148B00BBE531 /* ListItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemsResponse.swift; sourceTree = "<group>"; };
+		70EED80321F4DD3700F0118F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		70EED80521F5276600F0118F /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		70EED80721F52F6E00F0118F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListController.swift; sourceTree = "<group>"; };
 		B2BA66FF2199EC6A00ABC44A /* SudoKing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudoKing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BA67022199EC6A00ABC44A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B2BA67062199EC6B00ABC44A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B2BA67092199EC6C00ABC44A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B2BA670B2199EC6C00ABC44A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2BA670C2199EC6C00ABC44A /* SudoKing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SudoKing.entitlements; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				7090347321A86914002C3FF1 /* Log.swift */,
 				7038FDA421BAD63400AE26BA /* BashUtility.swift */,
 				70C7843921D99810003AC37C /* KeyCodes.swift */,
+				70EED80321F4DD3700F0118F /* Colors.swift */,
+				70EED80521F5276600F0118F /* Animations.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -252,10 +258,10 @@
 				7090347221A866E5002C3FF1 /* Utilities */,
 				70969B7F21A8415300E7D011 /* Controllers */,
 				B2BA67022199EC6A00ABC44A /* AppDelegate.swift */,
-				B2BA67062199EC6B00ABC44A /* Assets.xcassets */,
 				B2BA670B2199EC6C00ABC44A /* Info.plist */,
 				B2BA670C2199EC6C00ABC44A /* SudoKing.entitlements */,
 				B2BA67082199EC6C00ABC44A /* Main.storyboard */,
+				70EED80721F52F6E00F0118F /* Assets.xcassets */,
 			);
 			path = SudoKing;
 			sourceTree = "<group>";
@@ -384,7 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70AE4EA921BC1C0F009BE836 /* README.md in Resources */,
-				B2BA67072199EC6B00ABC44A /* Assets.xcassets in Resources */,
+				70EED80821F52F6E00F0118F /* Assets.xcassets in Resources */,
 				B2BA670A2199EC6C00ABC44A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -417,6 +423,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7038FD9421B8657300AE26BA /* PasswordLibrary.swift in Sources */,
+				70EED80421F4DD3700F0118F /* Colors.swift in Sources */,
 				7038FD9A21B89EA200AE26BA /* OPPasswordItem.swift in Sources */,
 				7038FDA521BAD63400AE26BA /* BashUtility.swift in Sources */,
 				7038FDA321B9A4C600AE26BA /* OnePasswordSessionManager.swift in Sources */,
@@ -435,6 +442,7 @@
 				70969B8521A8473100E7D011 /* PasswordPromptController.swift in Sources */,
 				7030669421C6A23F007488C8 /* PasswordError.swift in Sources */,
 				70969B8121A842E200E7D011 /* MainWindowController.swift in Sources */,
+				70EED80621F5276600F0118F /* Animations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

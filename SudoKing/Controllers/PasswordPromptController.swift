@@ -6,6 +6,10 @@ class PasswordPromptController: NSViewController {
     
     @IBOutlet weak var errorMessageLabel: NSTextField!
     
+    @IBOutlet weak var unlockFieldView: NSView!
+    
+    @IBOutlet weak var unlockButton: NSButton!
+    
     @IBAction func pushUnlockButton(_ sender: Any) {
         errorMessageLabel.stringValue = ""
         passwordValidation(password: passwordTextField.stringValue)
@@ -23,6 +27,7 @@ class PasswordPromptController: NSViewController {
             self.loadSessionView()
         } catch let error as PasswordError {
             errorMessageLabel.stringValue = error.message
+            Animations.shake(view: unlockFieldView, distance: 5, repeatCount: 2, duration: 0.08)
             Log.error("Returned error Message: \(error.message)")
         } catch {
             errorMessageLabel.stringValue = "Unable to Log In"
@@ -33,6 +38,26 @@ class PasswordPromptController: NSViewController {
     override func viewWillAppear() {
         errorMessageLabel.stringValue = ""
         self.loadSessionView()
+    }
+    
+    override func viewDidLoad() {
+        
+        // Setup Gradient Background
+        view.wantsLayer = true
+        let gradient = CAGradientLayer()
+        gradient.colors = [Colors.LessGreen.cgColor, Colors.Green.cgColor]
+        gradient.frame = view.layer!.bounds;
+        view.layer = gradient
+        
+        // Modify look and feel of textfield
+        passwordTextField.focusRingType = NSFocusRingType.none
+        passwordTextField.isBezeled = false
+        passwordTextField.drawsBackground = false
+        
+        // Modify look and feel of button
+        unlockButton.focusRingType = NSFocusRingType.none
+        unlockButton.isBordered = false
+        unlockButton.isTransparent = true
     }
     
     func loadSessionView(){

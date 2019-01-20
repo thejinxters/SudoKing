@@ -685,7 +685,7 @@
             <objects>
                 <windowController showSeguePresentationStyle="single" id="B8D-0N-5wS" customClass="MainWindowController" customModule="SudoKing" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" tabbingMode="disallowed" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" fullSizeContentView="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" texturedBackground="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="310" height="257"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
@@ -814,55 +814,72 @@
                         <rect key="frame" x="0.0" y="0.0" width="300" height="200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <secureTextField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adT-Pd-Ibd">
-                                <rect key="frame" x="23" y="86" width="225" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" focusRingType="none" drawsBackground="YES" usesSingleLineMode="YES" id="dgM-Iz-7wb">
-                                    <font key="font" metaFont="system" size="22"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                    <allowedInputSourceLocales>
-                                        <string>NSAllRomanInputSourcesLocaleIdentifier</string>
-                                    </allowedInputSourceLocales>
-                                </secureTextFieldCell>
-                                <connections>
-                                    <action selector="submitTextField:" target="6Fu-n3-ZzI" id="f3c-BX-0eL"/>
-                                </connections>
-                            </secureTextField>
-                            <button identifier="unlock" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mm1-ZU-Fmf">
-                                <rect key="frame" x="245" y="85" width="32" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSAddTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ITw-Og-PzW">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fn-OJ-oH5">
+                                <rect key="frame" x="23" y="143" width="187" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <textFieldCell key="cell" title="Enter your master password:" id="kqd-vm-BOn">
                                     <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="pushUnlockButton:" target="6Fu-n3-ZzI" id="drJ-1w-G93"/>
-                                </connections>
-                            </button>
-                            <textField identifier="errorMessage" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="la6-YM-SgI">
-                                <rect key="frame" x="21" y="23" width="258" height="46"/>
+                                    <color key="textColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField identifier="errorMessage" horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" verifyAmbiguity="off" translatesAutoresizingMaskIntoConstraints="NO" id="la6-YM-SgI">
+                                <rect key="frame" x="23" y="10" width="254" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" title="Error Message" id="DXw-WT-Cqy">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" red="0.92270392179489136" green="0.39720422804586242" blue="0.38461654257026068" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fn-OJ-oH5">
-                                <rect key="frame" x="21" y="132" width="178" height="17"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Enter your master password:" id="kqd-vm-BOn">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <customView identifier="UnlockFieldView" fixedFrame="YES" verifyAmbiguity="ignoreSizes" translatesAutoresizingMaskIntoConstraints="NO" id="vrk-oN-CMg">
+                                <rect key="frame" x="25" y="85" width="250" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <box fixedFrame="YES" boxType="custom" borderType="none" title="Underline For TextField" translatesAutoresizingMaskIntoConstraints="NO" id="vuc-kg-Ipd">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="1"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                        <view key="contentView" ambiguous="YES" id="IRn-bQ-nfD">
+                                            <rect key="frame" x="0.0" y="0.0" width="250" height="1"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </view>
+                                        <color key="fillColor" red="0.73333333333333328" green="0.73333333333333328" blue="0.73333333333333328" alpha="1" colorSpace="calibratedRGB"/>
+                                    </box>
+                                    <secureTextField focusRingType="none" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adT-Pd-Ibd">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" focusRingType="none" alignment="left" drawsBackground="YES" usesSingleLineMode="YES" id="dgM-Iz-7wb">
+                                            <font key="font" metaFont="system"/>
+                                            <color key="textColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <allowedInputSourceLocales>
+                                                <string>NSAllRomanInputSourcesLocaleIdentifier</string>
+                                            </allowedInputSourceLocales>
+                                        </secureTextFieldCell>
+                                        <connections>
+                                            <action selector="submitTextField:" target="6Fu-n3-ZzI" id="f3c-BX-0eL"/>
+                                        </connections>
+                                    </secureTextField>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HgE-NE-Oes">
+                                        <rect key="frame" x="225" y="5" width="25" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="Unlock" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" transparent="YES" imageScaling="proportionallyDown" inset="2" id="q3K-F3-dpB">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="pushUnlockButton:" target="6Fu-n3-ZzI" id="Gj3-zx-g9t"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </customView>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="errorMessageLabel" destination="la6-YM-SgI" id="cMC-aN-YEC"/>
                         <outlet property="passwordTextField" destination="adT-Pd-Ibd" id="3rs-c5-o5E"/>
+                        <outlet property="unlockButton" destination="HgE-NE-Oes" id="yaN-jp-Qc6"/>
+                        <outlet property="unlockFieldView" destination="vrk-oN-CMg" id="0db-om-5cF"/>
                     </connections>
                 </viewController>
                 <customObject id="4CZ-Tp-Glc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -871,6 +888,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="Unlock" width="25" height="25"/>
     </resources>
 </document>
