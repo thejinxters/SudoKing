@@ -33,6 +33,18 @@ After installing `sudoking`, you still need to configure [iterm2](https://iterm2
 
 ![configuration directions](https://raw.githubusercontent.com/thejinxters/SudoKing/master/img/sudoking-configure-iterm.gif)
 
+## Filter to Tag
+
+Items in SudoKing will show up in alphabetical order; however, you may only have a one password (or a small number of passwords) that are important to use in iTerm.
+
+SudoKing will automatically filter your passwords on load to any passwords that contain the tag `SudoKing`.
+![SudoKing Tag Example](https://raw.githubusercontent.com/thejinxters/SudoKing/master/img/tag-sudoking.png)
+
+Even when passwords are filtered, you can search all of your password library using a keyword.
+![Filter to Tag Before Search Example](https://raw.githubusercontent.com/thejinxters/SudoKing/master/img/tag-filter.png)
+![Filter to Search Example](https://raw.githubusercontent.com/thejinxters/SudoKing/master/img/password-search.png)
+
+
 ## Developer
 
 ### Build Release:

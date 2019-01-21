@@ -7,18 +7,37 @@ class PasswordListController: NSViewController {
     
     let fetchedPasswordsOpt: [PasswordListItem]? = try? PasswordLibraryFactory.shared.retrievePasswordList()
     var passwords: [PasswordListItem] = []
+    let matchTag: String = "sudoking"
     
     func filterPasswords() {
         if fetchedPasswordsOpt != nil {
+            let fetchedPasswords = fetchedPasswordsOpt!.sorted { (item1, item2) -> Bool in
+                item1.name < item2.name
+            }
             let searchString = searchField.stringValue.lowercased()
             if (searchString.count > 0){
-                passwords = fetchedPasswordsOpt!.filter { $0.name.lowercased().contains(searchString) }
+                passwords = fetchedPasswords.filter { $0.name.lowercased().contains(searchString) }
+            } else if (fetchedPasswords.contains { $0.tags?.contains(matchTag) ?? false }) {
+                passwords = filterToTagName(fetchedPasswords, tagValue: matchTag)
             } else {
-                passwords = fetchedPasswordsOpt!
+                passwords = fetchedPasswords
             }
             tableView.reloadData()
             selectFirstRow()
         }
+    }
+    
+    private func filterToTagName(_ fetchedPasswords: [PasswordListItem], tagValue:String) -> [PasswordListItem] {
+        return fetchedPasswords.filter({ (listItem) -> Bool in
+            if (listItem.tags != nil) {
+                let tags: [String] = listItem.tags!
+                return tags.contains(where: { (tag) -> Bool in
+                    return tag == tagValue
+                })
+            } else {
+                return false
+            }
+        })
     }
     
     override func viewDidLoad() {
@@ -40,7 +59,8 @@ class PasswordListController: NSViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.reloadData()
-        selectFirstRow()
+        
+        filterPasswords()
         
         // Registers keyDown listener within view
         NSEvent.addLocalMonitorForEvents(matching: .keyDown) {
@@ -118,6 +138,7 @@ extension PasswordListController: NSTableViewDelegate {
     
     
     func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
+        
         return MyNSTableRowView()
     }
     

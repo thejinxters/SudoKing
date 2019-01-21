@@ -24,11 +24,11 @@ class OnePasswordCli {
         ) throws -> String {
         do{
             let response = try bash.run("\(binary) \(command)")
+            if response.exitCode != 0 {
+                Log.error("Bash error stderr:\(response.stderr)")
+            }
             try fn.map { (runFn) -> Void in
                 try runFn(response)
-            }
-            if response.stderr.count > 0 {
-                Log.error(response.stderr)
             }
             return response.stdout
         } catch let error as NSError {
