@@ -718,7 +718,7 @@
                                             <constraint firstAttribute="height" constant="30" id="E2d-HM-yxe"/>
                                             <constraint firstAttribute="width" constant="430" id="w07-8d-miz"/>
                                         </constraints>
-                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" drawsBackground="YES" id="NVJ-oZ-sZT">
+                                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" placeholderString="Search for password..." drawsBackground="YES" id="NVJ-oZ-sZT">
                                             <font key="font" size="24" name="HelveticaNeue"/>
                                             <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

@@ -24,7 +24,8 @@ class OnePasswordLibrary {
         Log.debug("Attempting SignIn")
         try opCli.cli(
             binary: "echo \(password) | \(config.pathToOPBinary)",
-            command: "signin my \(config.email) \(config.secretKey) --output=raw",
+            command: "signin my \(config.email) \(config.secretKey) " +
+                "--shorthand=\(config.email) --output=raw",
             friendlyError: "Invalid Password"
         ) { (sessionResponse) in
             if sessionResponse.exitCode == 0 {
