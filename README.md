@@ -3,6 +3,8 @@ Sudo King
 
 Access 1Password from iTerm, with this [1Password Cli](https://support.1password.com/command-line/) wrapper
 
+![SudoKing Demo](https://raw.githubusercontent.com/thejinxters/SudoKing/master/img/sudoking-demo.gif)
+
 ## Getting Set Up
 
 Install `op` and `sudoking` via homebrew:

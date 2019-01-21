@@ -37,6 +37,7 @@
 		70EED80E21F6243600F0118F /* password-search.png in Resources */ = {isa = PBXBuildFile; fileRef = 70EED80C21F6243500F0118F /* password-search.png */; };
 		70EED80F21F6243600F0118F /* tag-filter.png in Resources */ = {isa = PBXBuildFile; fileRef = 70EED80D21F6243600F0118F /* tag-filter.png */; };
 		70EED81321F628A400F0118F /* tag-sudoking.png in Resources */ = {isa = PBXBuildFile; fileRef = 70EED81221F628A400F0118F /* tag-sudoking.png */; };
+		70EED81521F62E0400F0118F /* sudoking-demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 70EED81421F62E0400F0118F /* sudoking-demo.gif */; };
 		B2A6DF7F21A6083C0033BB21 /* PasswordListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */; };
 		B2BA67032199EC6A00ABC44A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BA67022199EC6A00ABC44A /* AppDelegate.swift */; };
 		B2BA670A2199EC6C00ABC44A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2BA67082199EC6C00ABC44A /* Main.storyboard */; };
@@ -97,6 +98,7 @@
 		70EED80C21F6243500F0118F /* password-search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "password-search.png"; sourceTree = "<group>"; };
 		70EED80D21F6243600F0118F /* tag-filter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tag-filter.png"; sourceTree = "<group>"; };
 		70EED81221F628A400F0118F /* tag-sudoking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tag-sudoking.png"; sourceTree = "<group>"; };
+		70EED81421F62E0400F0118F /* sudoking-demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "sudoking-demo.gif"; sourceTree = "<group>"; };
 		B2A6DF7D21A6083C0033BB21 /* PasswordListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordListController.swift; sourceTree = "<group>"; };
 		B2BA66FF2199EC6A00ABC44A /* SudoKing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SudoKing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2BA67022199EC6A00ABC44A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		703B26B421F3F12B0001855A /* img */ = {
 			isa = PBXGroup;
 			children = (
+				70EED81421F62E0400F0118F /* sudoking-demo.gif */,
 				70EED81221F628A400F0118F /* tag-sudoking.png */,
 				70EED80C21F6243500F0118F /* password-search.png */,
 				70EED80D21F6243600F0118F /* tag-filter.png */,
@@ -399,6 +402,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70EED80E21F6243600F0118F /* password-search.png in Resources */,
+				70EED81521F62E0400F0118F /* sudoking-demo.gif in Resources */,
 				70AE4EA921BC1C0F009BE836 /* README.md in Resources */,
 				70EED81321F628A400F0118F /* tag-sudoking.png in Resources */,
 				70EED80821F52F6E00F0118F /* Assets.xcassets in Resources */,
