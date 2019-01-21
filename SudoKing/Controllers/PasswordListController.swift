@@ -1,6 +1,7 @@
 import Cocoa
 
 class PasswordListController: NSViewController {
+    @IBOutlet weak var searchView: NSView!
     @IBOutlet weak var searchField: NSTextField!
     @IBOutlet weak var tableView: NSTableView!
     
@@ -21,7 +22,16 @@ class PasswordListController: NSViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        // Modify look and feel of textfield
+        searchView.wantsLayer = true
+        searchView.layer?.backgroundColor = Colors.LightTeal.cgColor
+        searchField.focusRingType = NSFocusRingType.none
+        searchField.isBezeled = false
+        searchField.drawsBackground = false
+        
+        tableView.focusRingType = NSFocusRingType.none
+        tableView.backgroundColor = Colors.DarkTeal
+        
         searchField.becomeFirstResponder()
         tableView.refusesFirstResponder = true
         
@@ -92,18 +102,37 @@ extension PasswordListController: NSTableViewDelegate {
         static let NameCell = "PasswordCellID"
     }
     
-    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+    class MyNSTableRowView: NSTableRowView {
         
+        override func drawSelection(in dirtyRect: NSRect) {
+            if self.selectionHighlightStyle != .none {
+                let selectionRect = NSInsetRect(self.bounds, 0, 0)
+                Colors.DarkTeal.setStroke()
+                Colors.VeryDarkTeal.setFill()
+                let selectionPath = NSBezierPath.init(roundedRect: selectionRect, xRadius: 0, yRadius: 0)
+                selectionPath.fill()
+                selectionPath.stroke()
+            }
+        }
+    }
+    
+    
+    func tableView(_ tableView: NSTableView, rowViewForRow row: Int) -> NSTableRowView? {
+        return MyNSTableRowView()
+    }
+    
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+
         var text: String = ""
         var cellIdentifier: String = ""
-        
+
         let item = passwords[row].name
-        
+
         if tableColumn == tableView.tableColumns[0] {
             text = item
             cellIdentifier = CellIdentifiers.NameCell
         }
-        
+
         if let cell = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(cellIdentifier), owner: nil) as? NSTableCellView {
             cell.textField?.stringValue = text
             return cell

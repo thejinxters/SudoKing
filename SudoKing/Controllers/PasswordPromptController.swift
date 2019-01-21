@@ -45,7 +45,7 @@ class PasswordPromptController: NSViewController {
         // Setup Gradient Background
         view.wantsLayer = true
         let gradient = CAGradientLayer()
-        gradient.colors = [Colors.LessGreen.cgColor, Colors.Green.cgColor]
+        gradient.colors = [Colors.DarkTeal.cgColor, Colors.LightTeal.cgColor]
         gradient.frame = view.layer!.bounds;
         view.layer = gradient
         
